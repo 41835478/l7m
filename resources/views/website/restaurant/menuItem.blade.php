@@ -9,7 +9,6 @@
         float: right !important;
     }
     .color-black{color: black}
-
 </style>
 
     <article class="container">
