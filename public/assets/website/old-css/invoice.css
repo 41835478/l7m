@@ -1,0 +1,95 @@
+﻿
+body {
+    margin-top: 20px;
+    font-family: Raleway;
+}
+
+@font-face {
+    font-family: 'RALEWAY-REGULAR_0';
+    src: url('RALEWAY-REGULAR_0.TTF') format('truetype');
+}
+
+p, span {
+    font-family: 'RALEWAY-REGULAR_0';
+}
+
+p{
+    font-size: 15px;
+}
+address {
+    background: #f5f5f5;
+    margin: 0px 0px 0px -15px;
+    padding: 5px 10px;
+}
+
+strong {
+    font-size: 13px;
+}
+
+#logo {
+    margin-bottom: 5%;
+}
+
+#headlines {
+    margin-bottom: 5%;
+}
+
+div#fisrt-box {
+    font-size: 18px;
+    background-color: #C5C2D8;
+    width: 46%;
+    margin-left: 2%;
+    padding-left: 12px;
+}
+div#sec-box {
+    font-size: 15px;
+    background-color: #f5f5f5;
+    padding-bottom: 4px;
+    margin-left: 2%;
+    width: 46%;
+    padding-left: 12px;
+}
+
+div#fisrt-box span{
+    font-size: 19px;
+    font-weight: bold;
+     font-family: raleway;
+}
+div#sec-box span{
+    font-size:19px;
+    font-weight: bold;
+    font-family: raleway;
+}
+.customer-info{
+    font-size: 19px;font-family: raleway;margin: 0px 9px;
+}
+.f-address{
+margin: 0px -2px 0px 0px;
+}
+.order-info{
+    font-size: 19px;font-family: raleway; margin: 0px -5px;
+}
+
+#table-info{
+    margin-top:5%;padding: 0px 11px;
+}
+
+.online-rec{
+    font-size: 30px;font-weight: bold;font-family: raleway;
+}
+table{
+    border: 1px solid #000; font-family: raleway;
+}
+.disclaimer{
+font-size: 17px;font-family: raleway;
+}
+.followus{
+    font-size: 17px;font-family:raleway;font-weight: bold;
+}
+.contact-info{
+    text-align:left;
+}
+
+.c-icon{
+    width: 14px;height:14px;margin-right: 5px;
+}

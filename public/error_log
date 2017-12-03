@@ -1,0 +1,47 @@
+[07-Oct-2017 09:52:28 America/Denver] PHP Fatal error:  require(): Failed opening required '/home1/fintolog/public_html/sahalat/vendor/composer/../symfony/polyfill-mbstring/bootstrap.php' (include_path='.:/usr/php/56/usr/lib64:/usr/php/56/usr/share/pear') in /home1/fintolog/public_html/sahalat/vendor/composer/autoload_real.php on line 66
+[08-Oct-2017 07:46:16 UTC] PHP Fatal error:  Interface 'App\module\notification\admin\Repository\NotificationContract' not found in /home1/fintolog/public_html/sahalat/app/module/notification/admin/repository/EloquentNotificationRepository.php on line 8
+[09-Oct-2017 07:43:47 UTC] PHP Fatal error:  Call to a member function getClientOriginalExtension() on null in /home1/fintolog/public_html/sahalat/app/Http/Controllers/common/files/FilesController.php on line 28
+[10-Oct-2017 08:08:05 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/813a392dd5c91855689334c5409103e5 on line 407
+[10-Oct-2017 08:08:06 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 08:08:18 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 08:08:34 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 08:08:43 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 08:08:49 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/813a392dd5c91855689334c5409103e5 on line 407
+[10-Oct-2017 08:11:08 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 08:11:12 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 08:28:08 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/813a392dd5c91855689334c5409103e5 on line 407
+[10-Oct-2017 08:28:09 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 08:28:18 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/813a392dd5c91855689334c5409103e5 on line 407
+[10-Oct-2017 08:28:26 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/813a392dd5c91855689334c5409103e5 on line 407
+[10-Oct-2017 08:32:28 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 09:14:51 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 09:15:05 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 09:15:28 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 09:15:41 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 09:15:52 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 09:21:01 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 09:21:09 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/813a392dd5c91855689334c5409103e5 on line 407
+[10-Oct-2017 09:50:05 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 09:59:29 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/813a392dd5c91855689334c5409103e5 on line 407
+[10-Oct-2017 09:59:40 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 10:00:41 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 10:01:28 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[10-Oct-2017 10:03:05 UTC] PHP Fatal error:  Unsupported operand types in /home1/fintolog/public_html/sahalat/storage/framework/views/03f770560c10222e7d94b683ae1a8e99 on line 419
+[23-Oct-2017 11:56:36 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home1/fintolog/public_html/sahalat/storage/framework/views/79937a8693aa50f2e357b908e77e6456 on line 398
+[23-Oct-2017 12:03:17 UTC] PHP Parse error:  syntax error, unexpected '{' in /home1/fintolog/public_html/sahalat/storage/framework/views/79937a8693aa50f2e357b908e77e6456 on line 402
+[24-Oct-2017 07:57:10 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home1/fintolog/public_html/sahalat/app/Exceptions/Handler.php on line 47
+[24-Oct-2017 07:57:10 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class App\Exceptions\Handler does not exist' in /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php:741
+Stack trace:
+#0 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php(741): ReflectionClass->__construct('App\\Exceptions\\...')
+#1 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php(631): Illuminate\Container\Container->build('App\\Exceptions\\...', Array)
+#2 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(674): Illuminate\Container\Container->make('App\\Exceptions\\...', Array)
+#3 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php(220): Illuminate\Foundation\Application->make('App\\Exceptions\\...', Array)
+#4 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php(7 in /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 741
+[24-Oct-2017 07:57:19 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home1/fintolog/public_html/sahalat/app/Exceptions/Handler.php on line 47
+[24-Oct-2017 07:57:19 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class App\Exceptions\Handler does not exist' in /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php:741
+Stack trace:
+#0 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php(741): ReflectionClass->__construct('App\\Exceptions\\...')
+#1 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php(631): Illuminate\Container\Container->build('App\\Exceptions\\...', Array)
+#2 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(674): Illuminate\Container\Container->make('App\\Exceptions\\...', Array)
+#3 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php(220): Illuminate\Foundation\Application->make('App\\Exceptions\\...', Array)
+#4 /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php(7 in /home1/fintolog/public_html/sahalat/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 741

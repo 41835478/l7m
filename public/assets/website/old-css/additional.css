@@ -1,0 +1,41 @@
+.food-court table tr.headerTr{
+	background-color:#e3e3e3;
+}
+.dishes img {height:106px}
+
+
+section.reviews{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+section.reviews strong{
+    font-weight: bold;
+    color: #5f4cb0;
+    font-size: 18px;
+}
+section.reviews p{
+    margin-top: 5px;
+}
+.sub-review{
+    float: right;
+    margin: 0;
+    margin-right: 80px;
+    color: #222;
+    margin-top: -28px;
+}
+.sub-review .btn{
+
+}
+
+
+
+  .col-sm-3{
+        /*float: right !important;*/
+    }
+
+
+
+
+
+
