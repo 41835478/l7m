@@ -111,7 +111,7 @@
         <div class="form-group {{ $errors->has("content_en") ? "has-error" : ""}}  col-xs-12">
 {!! Form::label("content_en", trans("cms.content_en"), ["class" => "col-sm-12"]) !!}
 <div class="col-sm-12">
-    {!! Form::textarea("content_en", null, ["class" => "form-control","placeholder"=> trans("cms.content_en") ,'id'=>'editor1']) !!}
+    {!! Form::textarea("content_en", null, ["class" => "form-control","placeholder"=> trans("cms.content_en") ]) !!}
     {!! $errors->first("content_en", "<p class='help-block'>:message</p>") !!}
 </div>
 </div>
@@ -121,7 +121,7 @@
         <div class="form-group {{ $errors->has("content_ar") ? "has-error" : ""}}  col-xs-12">
 {!! Form::label("content_ar", trans("cms.content_ar"), ["class" => "col-sm-12"]) !!}
 <div class="col-sm-12">
-    {!! Form::textarea("content_ar", null, ["class" => "form-control","placeholder"=> trans("cms.content_ar") ,'id'=>'editor2']) !!}
+    {!! Form::textarea("content_ar", null, ["class" => "form-control","placeholder"=> trans("cms.content_ar") ]) !!}
     {!! $errors->first("content_ar", "<p class='help-block'>:message</p>") !!}
 </div>
 </div>

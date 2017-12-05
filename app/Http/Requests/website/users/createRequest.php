@@ -30,28 +30,47 @@ class createRequest extends Request
     "email"=>'required|email|unique:users',
             "password"=>'required|confirmed',
             'password_confirmation'=> 'required',
-            "mobile_company"=>'required',
+    //         "mobile_company"=>'required',
+    // "mobile"=>'required|min:4|numeric',
+    //         "phone"=>'required|min:4|numeric',
+    //         "area_id"=>'required',
+
+
+    //         "name"=>'required',
+    //         "block"=>'required',
+    //         "street"=>'required',
+    //         "avenue"=>'required',
+    //         "building"=>'required',
+    //         "floor"=>'required',
+    //         "apartment_number"=>'required',
+
+    //         "address_mobile"=>'required|min:4|numeric',
+    //         "address_phone"=>'required|min:4|numeric',
+
+    // "gender"=>'required',
+    //         "occupation"=>'required',
+    //         "terms"=>'required',
+
+     "mobile_company",
     "mobile"=>'required|min:4|numeric',
-            "phone"=>'required|min:4|numeric',
+            "phone"=>'min:4|numeric',
             "area_id"=>'required',
 
 
-            "name"=>'required',
-            "block"=>'required',
-            "street"=>'required',
-            "avenue"=>'required',
-            "building"=>'required',
-            "floor"=>'required',
-            "apartment_number"=>'required',
+            "name",
+            "block",
+            "street",
+            "avenue",
+            "building",
+            "floor",
+            "apartment_number",
 
-            "address_mobile"=>'required|min:4|numeric',
-            "address_phone"=>'required|min:4|numeric',
+            "address_mobile",
+            "address_phone",
 
-    "gender"=>'required',
-            "occupation"=>'required',
-            "terms"=>'required',
-
-
+    "gender",
+            "occupation",
+            "terms",
 
 
 

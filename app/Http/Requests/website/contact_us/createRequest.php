@@ -23,6 +23,7 @@ class createRequest extends Request
     public function rules()
     {
         return [
+            "name"=>'required',
     "email"=>'required|email',
     "phone"=>'required|numeric',
     "comments"=>'required',

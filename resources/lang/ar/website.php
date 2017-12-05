@@ -41,6 +41,7 @@
 'from'=>'من',
 'dumyName'=>'مشروم وساندوش سويسري',
 'about'=>'حول',
+'aboutUs'=>'حول',
 'sahalat'=>'سهلات',
 'aboutSahalatHeader'=>'الحلول الذكية للتوصيل',
 'aboutSahalatHomeBody'=>'أفضل تجربة في طلب الطعام والتوصيل بأسرع الطرق وبالسهولة التامة التي تضمن لك التمتع بتجربة مميزة.',
@@ -67,10 +68,14 @@
 'payment'=>'الدفع',
 'address'=>'العنوان',
 'sahalatAddressText'=>'الكويت مدينة الكويت',
+ 'l7mAddressText'=>'L7M.COM<br> العنوان<br> كويت',
 'phoneNumberLabel'=>'رقم الهاتف',
 'sahalatPhoneNumber'=>'0534 432 4639   |   545 4834 9498',
+ 'l7mPhoneNumber'=>'+ 965 2222 2222',
 'emailIdLabel'=>'البريد الإلكتروني',
 'sahalatEmailText'=>'info@sahalat.com',
+'l7mEmailText'=>'info@l7m.com',
+'Hotline'=>'الخط الساخن <span>+ 965 2222 2222</span>',
 'account'=>'الحساب',
 'information'=>'المعلومات',
 'accountInformation'=>'معلومات الحساب',
@@ -82,6 +87,7 @@
 'deliveryInformation'=>'معلومات التوصيل',
 'personalInformation'=>'المعلومات الشخصية',
 'submit'=>'إرسال',
+'reset'=>'إعادة',
 'agreementText'=>'لقد قمت بقراءة سياسة الخصوصية وأنا موافق على جميع البنود الواردة فيها',
 'optional'=>'اختياري',
 'enterEmailToReset'=>'أدخل بريدك الإلكتروني ليتم تغيير كلمة السر',
@@ -120,6 +126,7 @@
 'reorder'=>'إعادة الطلب',
 'continue'=>'إكمال الطلب',
 'signUpHtml'=>'تسجيل <br><span>حساب</span>',
+'signUp'=>'تسجيل دخول',
 'toJoinUsText'=>'للإنضمام إلى مجتمع سهلات . الرجاء ملئ الاستمارة التالية وسنقوم بالإتصال بك قريباً',
 'addRestaurantHtml'=>'طلب <br><span>مطعم جديد</span>',
 'firstName'=>'الاسم الأول',
@@ -127,6 +134,7 @@
 'telephone'=>'هاتف',
 'name'=>'الاسم',
 'addRestaurant'=>'إضافة مطعم',
+'addShop'=>'إضافة متجر لحم',
 'orderYourDishHtml'=>'أطلب<span>طبقك الآن</span>',
 'findRestaurant'=>'بحث عن المطعم',
 'now'=>' الآن ',
@@ -143,7 +151,7 @@
 'errorMessageNoDeliverTime'=>'نأسف التوصيل غير متاح في هذا الوقت الرجاء اختيار وقت آخر',
 '0'=>'',
 
-
+'feedBack'=>'ردود الفعل',
 
 
 'allgov'=>'جميع <br> المناطق',
@@ -215,6 +223,9 @@
 'createAccount'=>'انشاء حساب',
 'current'=>'الطلب',
 'orders'=>'ألحالي',
-
-'gesutinf'=>'معلومات الضيف'
+'termsCondition'=>'البنود و الظروف',
+'gesutinf'=>'معلومات الضيف',
+'addressInfo'=>'<span>عنوان</span> معلومات',
+'signForm'=>'Lorem Ipsum is simply dummy text of the printing',
+'titles'=>''
 ]; ?>
