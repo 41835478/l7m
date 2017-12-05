@@ -23,6 +23,7 @@ return true;
 public function rules()
 {
 return [
+	"name"=>'required',
     "email"=>'required',
     "phone"=>'required',
     "comments"=>'required',

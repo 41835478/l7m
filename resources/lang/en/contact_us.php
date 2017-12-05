@@ -34,5 +34,7 @@ return [
 
 'contactForm'=>'Thank you for reaching us, please feel free to stay in touch with us by sharing your feedback or any enquiry you have. 
 Your request will be send to the consultant and they will be in touch with you soon.',
+'feedbackForm'=>'Thank you for reaching us,
+please feel free to stay in touch with us by sharing your feedback or any enquiry you have.'
 
 ];
