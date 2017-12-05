@@ -41,6 +41,7 @@
 'from'=>'من',
 'dumyName'=>'مشروم وساندوش سويسري',
 'about'=>'حول',
+'emailAddress'=>'عنوان البريد الإلكتروني',
 'aboutUs'=>'حول',
 'sahalat'=>'سهلات',
 'aboutSahalatHeader'=>'الحلول الذكية للتوصيل',
@@ -92,6 +93,7 @@
 'optional'=>'اختياري',
 'enterEmailToReset'=>'أدخل بريدك الإلكتروني ليتم تغيير كلمة السر',
 'forget'=>'نسيت',
+'forgetPassword'=>'هل نسيت كلمة السر',
 'addNew'=>'إضافة جديد',
 'availableArea'=>'المناطق المتوفر فيها التوصيل',
 'deliveryCharge'=>'عمولة التوصيل',
@@ -152,7 +154,7 @@
 '0'=>'',
 
 'feedBack'=>'ردود الفعل',
-
+ 'signIn'=>'دخول',
 
 'allgov'=>'جميع <br> المناطق',
 'cuisiness'=>'جميع  <br> المطابخ',
