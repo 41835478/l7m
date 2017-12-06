@@ -30,12 +30,13 @@ class createRequest extends Request
     "email"=>'required|email|unique:users',
             "password"=>'required|confirmed',
             'password_confirmation'=> 'required',
+            'address'=>'required',
+            "mobile"=>'required|min:4|numeric',
+               "area_id"=>'required',
     //         "mobile_company"=>'required',
     // "mobile"=>'required|min:4|numeric',
     //         "phone"=>'required|min:4|numeric',
     //         "area_id"=>'required',
-
-
     //         "name"=>'required',
     //         "block"=>'required',
     //         "street"=>'required',
@@ -51,12 +52,8 @@ class createRequest extends Request
     //         "occupation"=>'required',
     //         "terms"=>'required',
 
-     "mobile_company",
-    "mobile"=>'required|min:4|numeric',
+     "mobile_company",   
             "phone"=>'min:4|numeric',
-            "area_id"=>'required',
-
-
             "name",
             "block",
             "street",

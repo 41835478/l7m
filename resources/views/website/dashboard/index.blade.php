@@ -101,7 +101,7 @@
         <section class="shop-wrapper">
             <article class="container">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="all-l7m-shops.html">
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="/restaurant">
                             <div class="shop_box"> <img src="/assets/website/images/shop1.jpg" alt="">
                                 <div class="cont_bx">
                                     <div class="inn_cnt">
@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                         </a> </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="#">
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="/restaurant?type=new">
                             <div class="shop_box"> <img src="/assets/website/images/shop2.jpg" alt="">
                                 <div class="cont_bx">
                                     <div class="inn_cnt">
@@ -121,7 +121,7 @@
                                 </div>
                             </div>
                         </a> </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="#">
+                    <div class="col-md-4 col-sm-6 col-xs-12"> <a href="/dish?type=mostSelling">
                             <div class="shop_box"> <img src="/assets/website/images/shop3.jpg" alt="">
                                 <div class="cont_bx">
                                     <div class="inn_cnt">
