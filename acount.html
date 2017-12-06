@@ -144,7 +144,7 @@
                                         {!! Form::close() !!}
 
                                     </div>
-                                     <div class="tab-pane" id="tab_default_2">
+                               <!--      <div class="tab-pane" id="tab_default_2">
                                         <h3>{{trans('website.deliveryAddress')}}</h3>
 
 
@@ -335,7 +335,7 @@
                                                 <!-- <hr>
                                                <div class="radio">
                           <label><input name="optradio" type="radio">Default Address</label>
-                        </div>
+                        </div>-->
                                             </section>
                                         </a>
 @endforeach
@@ -367,10 +367,10 @@
                                                         <strong> {{ isset($oOrderResult->restaurant->{'name_'.config('app.locale')})? $oOrderResult->restaurant->{'name_'.config('app.locale')}:'#' }}   @if(isset($oOrderResult->address->name)), {{$oOrderResult->address->name }}  @endif </strong>
 
                                                         {{$oOrderResult->created_at }}
-                    <span class="right">
-                      KD: {{$oOrderResult->total }}<br>
+										<span class="right">
+											KD: {{$oOrderResult->total }}<br>
                                              {{trans('website.status')}} : {{config('array.order_status')[$oOrderResult->status] }}
-                    </span>
+										</span>
                                                     </a>
 
                                                 </div>
@@ -645,15 +645,15 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_POSTFIELDS => $data 
 ));
-$response = curl_exec($curl);       
+$response = curl_exec($curl);				
 $err = curl_error($curl);
 curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  //echo $response;
-  $obj = json_decode($response , true);
-  $token = $obj['token'];
+	//echo $response;
+	$obj = json_decode($response , true);
+	$token = $obj['token'];
 }
 ?>
 
@@ -671,11 +671,11 @@ if ($err) {
     <script>
         $('#insertAddressIframe').attr('src','/selectAddressFromMap?latitude='+$('#hiddenLatitudeInput').val()+'&longitude='+$('#hiddenLongitudeInput').val()+'')
     </script>
-  
-  <script>
-    // By Ibtisam alhitteh
-    $(document).ready(function(){
-      $("#paci_number").blur(function(){
+	
+	<script>
+		// By Ibtisam alhitteh
+		$(document).ready(function(){
+			$("#paci_number").blur(function(){
                             var toke ;
                                                          $.ajax({
                         type: 'POST',
@@ -683,116 +683,116 @@ if ($err) {
                         url : '{{route('getpacitoken')}}',
                         
                         success:function(data){
-                                    var token   = data;
-        var civilId = $('#paci_number').val();
+                            				var token   = data;
+				var civilId = $('#paci_number').val();
                                 
-        var lang  = "{{config("app.locale")}}";
-        fields_empty();
-        var civilId_len = civilId.length;
-        if(civilId_len==8)
-          paci_geocoder_by_civilId(token , civilId ,lang);
-        else
-          console.log("CivilId error");
+				var lang	= "{{config("app.locale")}}";
+				fields_empty();
+				var civilId_len = civilId.length;
+				if(civilId_len==8)
+					paci_geocoder_by_civilId(token , civilId ,lang);
+				else
+					console.log("CivilId error");
 
                         },
                         timeout:10000
                     });
 
-      });
+			});
                         
-      // Empty fields in form
-      function fields_empty(){
-        //paci_number
-        $("#paci_number").val("");
-        //block
-        $("#block").val("");
-        //street
-        $("#street").val("");
-        //avenue
-        $("#avenue").val("");
-        //building
-        $("#building").val("");
-        //floor
-        $("#floor").val("");
-        //apartment_number
-        $("#apartment_number").val("");
-        // directions
-        $('#directions').val("");
-      }
-      
-      function paci_geocoder_by_civilId (token , civilId , lang){
-        $.ajax({
-           url: 'https://kuwaitportal.paci.gov.kw/arcgisportal/rest/services/Hosted/PACIGeocoder/FeatureServer/0/query?where=civilid='+civilId+'&returnGeometry=false&f=pjson&token='+token+'&outFields=*',
-           data: {civilid:'', returnGeometry:"false", token:'',  f:"pjson" , outFields:"*"},
-           error: function() {
-            $('#info').html('<p>An error has occurred</p>');
-           },
-           dataType: 'json',
-           success: function(data) { 
-          try {
-            var result = jQuery.parseJSON(JSON.stringify(data)); 
-            if(result.error){
-              console.log("Code: "+result.error.code);
-              console.log("Message: "+result.error.message);
-              console.log("Details: "+result.error.details);
-              console.log("URL: "+'https://kuwaitportal.paci.gov.kw/arcgisportal/rest/services/Hosted/PACIGeocoder/FeatureServer/0/query?where=civilid='+civilId+'&returnGeometry=false&f=pjson&token='+token+'&outFields=*');
-            }else{
-               var features = jQuery.parseJSON(JSON.stringify(result.features[0]));
-               if(lang=="en"){
-                parcing_data_en(features.attributes);
-               }else{
-                parcing_data_ar(features.attributes);
-               }
-            }
-          }
-          catch(err) {
-            console.log(err.message);
-          }
-           },
-           type: 'GET'
-        });
-        
-      }
-  
-      function parcing_data_en (data){
-        //paci_number
-        $("#paci_number").val(data.civilid);
-        //block
-        $("#block").val(data.blockenglish);
-        //street
-        $("#street").val(data.streetenglish);
-        //avenue
-        $("#avenue").val(data.neighborhoodenglish);
-        //building
-        $("#building").val(data.buildingnameenglish);
-        //floor
-        //floor
-        $("#floor").val(data.floor_no);
-        //apartment_number    
-        $("#apartment_number").val(data.unit_no);
-        // directions
-        $('#directions').val(data.location);
-      }
-  
-      function parcing_data_ar (data){
-        //paci_number
-        $("#paci_number").val(data.civilid);
-        //block
-        $("#block").val(data.blockarabic);
-        //street
-        $("#street").val(data.streetarabic);
-        //avenue
-        $("#avenue").val(data.neighborhoodarabic);
-        //building
-        $("#building").val(data.buildingnamearabic);
-        //floor
-        $("#floor").val(data.floor_no);
-        //apartment_number    
-        $("#apartment_number").val(data.unit_no);
-        //location
-        $('#directions').val(data.location);
-      }
-    });
+			// Empty fields in form
+			function fields_empty(){
+				//paci_number
+				$("#paci_number").val("");
+				//block
+				$("#block").val("");
+				//street
+				$("#street").val("");
+				//avenue
+				$("#avenue").val("");
+				//building
+				$("#building").val("");
+				//floor
+				$("#floor").val("");
+				//apartment_number
+				$("#apartment_number").val("");
+				// directions
+				$('#directions').val("");
+			}
+			
+			function paci_geocoder_by_civilId (token , civilId , lang){
+				$.ajax({
+				   url: 'https://kuwaitportal.paci.gov.kw/arcgisportal/rest/services/Hosted/PACIGeocoder/FeatureServer/0/query?where=civilid='+civilId+'&returnGeometry=false&f=pjson&token='+token+'&outFields=*',
+				   data: {civilid:'', returnGeometry:"false", token:'',  f:"pjson" , outFields:"*"},
+				   error: function() {
+					  $('#info').html('<p>An error has occurred</p>');
+				   },
+				   dataType: 'json',
+				   success: function(data) { 
+					try {
+					  var result = jQuery.parseJSON(JSON.stringify(data)); 
+					  if(result.error){
+						  console.log("Code: "+result.error.code);
+						  console.log("Message: "+result.error.message);
+						  console.log("Details: "+result.error.details);
+						  console.log("URL: "+'https://kuwaitportal.paci.gov.kw/arcgisportal/rest/services/Hosted/PACIGeocoder/FeatureServer/0/query?where=civilid='+civilId+'&returnGeometry=false&f=pjson&token='+token+'&outFields=*');
+					  }else{
+						   var features = jQuery.parseJSON(JSON.stringify(result.features[0]));
+						   if(lang=="en"){
+								parcing_data_en(features.attributes);
+						   }else{
+								parcing_data_ar(features.attributes);
+						   }
+					  }
+					}
+					catch(err) {
+						console.log(err.message);
+					}
+				   },
+				   type: 'GET'
+				});
+				
+			}
+	
+			function parcing_data_en (data){
+				//paci_number
+				$("#paci_number").val(data.civilid);
+				//block
+				$("#block").val(data.blockenglish);
+				//street
+				$("#street").val(data.streetenglish);
+				//avenue
+				$("#avenue").val(data.neighborhoodenglish);
+				//building
+				$("#building").val(data.buildingnameenglish);
+				//floor
+				//floor
+				$("#floor").val(data.floor_no);
+				//apartment_number		
+				$("#apartment_number").val(data.unit_no);
+				// directions
+				$('#directions').val(data.location);
+			}
+	
+			function parcing_data_ar (data){
+				//paci_number
+				$("#paci_number").val(data.civilid);
+				//block
+				$("#block").val(data.blockarabic);
+				//street
+				$("#street").val(data.streetarabic);
+				//avenue
+				$("#avenue").val(data.neighborhoodarabic);
+				//building
+				$("#building").val(data.buildingnamearabic);
+				//floor
+				$("#floor").val(data.floor_no);
+				//apartment_number		
+				$("#apartment_number").val(data.unit_no);
+				//location
+				$('#directions').val(data.location);
+			}
+		});
 
-  </script>
+	</script>
     @stop
