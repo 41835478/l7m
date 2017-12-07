@@ -40,7 +40,7 @@
             <div class="reg_link">Don't have an account ? <a href="/user/create">Register Now</a></div>
             
             
-            
+            {!! Form::close() !!}
        
           
           
