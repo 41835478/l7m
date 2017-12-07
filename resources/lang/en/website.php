@@ -18,6 +18,7 @@ return [
     'cuisines'=>'Cuisines',
     'password'=>'Password',
     'updatePass'=>'UPDATEs PASSWORD',
+    'update'=>'Update',
     'staySignedIn'=>'Stay Signed In',
     'forgotYourPassword'=>'Forgot Your Password',
     'googleSignIn'=>'google Sign In',

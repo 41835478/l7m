@@ -23,6 +23,7 @@ return [
         2 => 'visa',
 
     ],
+    'area_id' => ['Shuwaikh', 'Kuwait City','Kaifan','Khaldiya','Shamiya','Hawalli','Cairo','Salmiya ','amman city','aaaa'],
     'payment_type_cash_index'=>0,
     'payment_type_knet_index'=>1,
     'payment_type_visa_index'=>2,

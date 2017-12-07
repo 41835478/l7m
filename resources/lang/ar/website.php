@@ -10,6 +10,7 @@
 'toggleNavigation'=>'التنقل',
 'newRestaurants'=>'المطاعم الحديثة',
 'updatePass'=>'تعديل كلمة السر',
+ 'update'=>'تعديل',
 'mostSellingDishes'=>'أكثر الأطباق مبيعاً',
 'login'=>'دخول',
 'nameL7m'=>'اسم لحم',
