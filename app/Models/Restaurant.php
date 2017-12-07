@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Restaurant extends Model
 {
     protected $fillable = [
-       "id","name_en","name_ar","branch","Owner_first_name","Owner_last_name","email","available_payment","telephone","address_en","address_ar","description_en","description_ar","status","min_amount","working_hour_from","working_hour_to","deliver_time_from","deliver_time_to","deliver_charge","rating","show_menu","order_accept_days","offline_order","summary_en","summary_ar","url","img","commission_type","discount_type","discount","area_id","follow_us","notification","long",'lat'    ];
+       "id","name_en","name_ar","branch","Owner_first_name","Owner_last_name","email","available_payment","telephone","address_en","address_ar","description_en","description_ar","status","min_amount","working_hour_from","working_hour_to","deliver_time_from","deliver_time_to","deliver_charge","rating","show_menu","order_accept_days","offline_order","summary_en","summary_ar","url","img","commission_type","discount_type","discount","area_id","follow_us","notification","long",'lat'  ,"cuisines"  ];
     protected $table='restaurant';
 
     public $timestamps =true ;
