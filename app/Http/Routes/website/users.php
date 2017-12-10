@@ -9,5 +9,9 @@ Route::group(['middleware' => ['website.authorization'],'namespace' => 'website\
     Route::get('/invoice/{id}','Order@invoice');
     Route::post('/order/getpacitoken', 'Order@getpacitoken')->name('getpacitoken');
 
+    Route::get('signin', 'Users@getLogin');
+
+Route::post('signin','Users@postLogin');
+
 });
 

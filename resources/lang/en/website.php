@@ -11,7 +11,7 @@ return [
     'toggleNavigation'=>'Toggle navigation',
     'newRestaurants'=>'New L7M SHOP',
     'mostSellingDishes'=>'Most selling dishes',
-    'login'=>'LOG IN',
+    'login'=>'LOGIN',
     'userName'=>'User Name ',
     'l7mDetails'=>'L7M Details',
     'email'=>'Email',

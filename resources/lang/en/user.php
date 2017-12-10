@@ -9,5 +9,6 @@ return [
     'PleaseTryAgain'=>'Error, Please try again later.',
     'invalidPassord'=>'Invalid Password ',
     'checkEmailResetPassword'=>'Please Check Your Email to Reset Password',
-    'userNotExist'=>'This email does not belong to any user'
+    'userNotExist'=>'This email does not belong to any user',
+    'login'=>'LOGIN'
 ];
