@@ -2,7 +2,7 @@
 @section('title', Lang::get('website.myprofile'))
 @section('content')
 
-    @include('website.partials.innerSearch',['title'=> trans('website.myAccount'),'img'=>'/assets/website/images/contact-icon.png','icon'=>'fa fa-list'])
+    @include('website.partials.innerSearch',['title'=> trans('website.accountinfo').'  <br><span>'.trans('website.informationin').'</span>','img'=>'/assets/website/images/contact-icon.png','icon'=>'fa fa-list'])
 <!--,'title2'=>trans('website.signForm')-->
 
 
@@ -18,168 +18,133 @@
 </style>
 
 
-   <!--  <section class="inner_content_area">
+    <section class="inner_content_area">
         <div class="container">
             <div class="row">
                 <div class="col-sm-9">
                     <div class="row tab-view">
                         <div class="tabbable-panel">
-                            <div class="tabbable-line"> -->
-                               <!--  <ul class="nav nav-tabs "> -->
-                                   <!--  <li class="active">
+                            <div class="tabbable-line">
+                                <ul class="nav nav-tabs ">
+                                    <li class="active">
                                         <a href="#tab_default_1" data-toggle="tab">
                                             {{trans('website.accountInformation')}} </a>
-                                    </li> -->
-                                 <!--    <li>
+                                    </li>
+                                    <li>
                                         <a href="#tab_default_2" data-toggle="tab">
 
                                              {{trans('website.deliveryAddress')}}  </a>
-                                    </li> -->
-                                  <!--   <li>
+                                    </li>
+                                    <li>
                                         <a href="#tab_default_3" data-toggle="tab">
                                             {{trans('website.orderSummary')}}  </a>
-                                    </li> -->
-                                 <!-- <li> <a href="#tab_default_4" data-toggle="tab">
-                                            {{trans('website.changepassword')}}  </a> </li> -->
+                                    </li>
+                                 <li> <a href="#tab_default_4" data-toggle="tab">
+                                            {{trans('website.changepassword')}}  </a> </li>
 
 
-                               <!--  </ul> -->
-                                <div >
-                             
-<section class="inner-wrapper">
-    <article class="container">
-    
-    <div class="content_wrapper">
-    <!--     <div class="captions_sec">
-            <h6>
-Welcome to My Account!<br>
-Feel free to check, put or edit your information here as your preference.</h6>
-        </div> -->
-        
-        
-        <section class="acc_info">
-            <div class="cap-t"><h5>{{trans('website.accountInformation')}}</h5> </div>
-              {!! Form::model($oUsers, [
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab_default_1">
+                                        <h3> {{trans('website.accountInformation')}} </h3>
+
+                                        {!! Form::model($oUsers, [
                                             'method' => 'PATCH',
                                             'url' => ['/users', $oUsers->id],
                                             'class' => 'form-horizontal ajaxForm'
                                         ]) !!}
-                <div class="row personal-info">
-                
-                    <aside class="col-md-6 col-sm-6">
-                       
-                        <ul>
-                           <!--  <li><span>First Name</span> sample name</li> -->
-                         <li class=" {{ $errors->has("first_name") ? "has-error" : ""}}">
-                            <span>
-                                            {!! Form::label("first_name", trans("users.first_name"), []) !!}
-                                        </span>
-                                                {!! Form::text("first_name", null, ["placeholder"=> trans("users.first_name")]) !!}
+
+                                        <div class="form-group {{ $errors->has("first_name") ? "has-error" : ""}}  col-xs-6">
+                                            {!! Form::label("first_name", trans("users.first_name"), []) !!}<span class="reqrd">*</span>
+                                            <div class="col-xs-12">
+                                                {!! Form::text("first_name", null, ["class" => "form-control","placeholder"=> trans("users.first_name")]) !!}
                                                 {!! $errors->first("first_name", "<p class='help-block'>:message</p>") !!}
-                                        </li>
+                                            </div>
+                                        </div>
 
-
-
-                            <!-- <li><span>EMAIL  </span> sample@gmail.com</li> -->
-                            <li class=" {{ $errors->has("email") ? "has-error" : ""}} ">
-                                          <span>  {!! Form::label("email", trans("users.email"), []) !!}
-                                          </span>
-                                                {!! Form::text("email", null, ["placeholder"=> trans("users.email")]) !!}
-                                                {!! $errors->first("email", "<p class='help-block'>:message</p>") !!}
-                                        </li>
-
-
-
-
-                           <!--  <li><span>ADDRESS</span> Sample Place , Kuwait</li> -->
-                           <li class="{{ $errors->has("address") ? "has-error" : ""}} ">
-                                           <span> {!! Form::label("address", trans("users.address"), []) !!}
-                                           </span>
-                                                {!! Form::text("address", null, ["placeholder"=> trans("users.address")]) !!}
-                                                {!! $errors->first("address", "<p class='help-block'>:message</p>") !!}
-                                        </li>
-
-
-                           <!--  <li><span>PASSWORD</span> ***************</li> -->
-                             <li class=" {{ $errors->has("password") ? "has-error" : ""}} ">
-                                          <span>  {!! Form::label("password", trans("users.password"), []) !!}
-                                        </span>
-                                                {!! Form::text("password", null, ["placeholder"=> trans("users.password")]) !!}
-                                                {!! $errors->first("password", "<p class='help-block'>:message</p>") !!}
-                                        </li>
-
-
-
-                        </ul>
-                    </aside>
-
-                    <aside class="col-md-6 col-sm-6">
-                        <ul>
-                            <!-- <li><span>lAST Name </span> sample name</li> -->
-                             <li class=" {{ $errors->has("last_name") ? "has-error" : ""}} ">
-                                       <span>     {!! Form::label("last_name", trans("users.last_name"), []) !!}
-                                            </span>
-                                                {!! Form::text("last_name", null, ["placeholder"=> trans("users.last_name")]) !!}
+                                        <div class="form-group {{ $errors->has("last_name") ? "has-error" : ""}}  col-xs-6">
+                                            {!! Form::label("last_name", trans("users.last_name"), []) !!}<span class="reqrd">*</span>
+                                            <div class="col-xs-12">
+                                                {!! Form::text("last_name", null, ["class" => "form-control","placeholder"=> trans("users.last_name")]) !!}
                                                 {!! $errors->first("last_name", "<p class='help-block'>:message</p>") !!}
-                                        </li>
+                                            </div>
+                                        </div>
 
+                                        <div class="clearfix"></div>
 
-                           <!--  <li><span>PHONE NUMBER</span> +91 000 000 00</li> -->
-                           <li class="{{ $errors->has("mobile") ? "has-error" : ""}} ">
-                                         <span>   {!! Form::label("mobile", trans("users.mobile"), []) !!}
-                                        </span>
-                                                {!! Form::text("mobile", null, ["placeholder"=> trans("users.mobile")]) !!}
+                                        <div class="form-group {{ $errors->has("mobile") ? "has-error" : ""}}  col-xs-6">
+                                            {!! Form::label("mobile", trans("users.mobile"), []) !!}<span class="reqrd">*</span>
+                                            <div class="col-xs-12">
+                                                {!! Form::text("mobile", null, ["class" => "form-control","placeholder"=> trans("users.mobile")]) !!}
                                                 {!! $errors->first("mobile", "<p class='help-block'>:message</p>") !!}
-                                        </li>
+                                            </div>
+                                        </div>
 
 
 
-                            <!-- <li><span>COUNTRY</span> Kuwait</li> -->
-                            <li class=" {{ $errors->has("area_id") ? "has-error" : ""}}  ">
-               <span>     {!! Form::label("area_id", trans("users.area_id"), []) !!} 
-                </span>
-                        {!! Form::select("area_id",config('array.area_id'), null, ["placeholder"=> trans("users.area_id")]) !!}
-                        {!! $errors->first("area_id", "<p class='help-block'>:message</p>") !!}
-                </li>
+                                        <div class="form-group {{ $errors->has("phone") ? "has-error" : ""}}  col-xs-6">
+                                            {!! Form::label("phone", trans("users.phone"), []) !!}<span class="reqrd">*</span>
+                                            <div class="col-xs-12">
+                                                {!! Form::text("phone", null, ["class" => "form-control","placeholder"=> trans("users.phone")]) !!}
+                                                {!! $errors->first("phone", "<p class='help-block'>:message</p>") !!}
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+
+                                        <div class="form-group {{ $errors->has("gender") ? "has-error" : ""}}  col-xs-6">
+                                            {!! Form::label("gender", trans("users.gender"), []) !!}<span class="reqrd">*</span>
+                                            <div class="col-xs-12">
+                                            {!! Form::select("gender",config('array.users_gender'), null, ["class" => "form-control","placeholder"=> trans("users.gender")]) !!} 
+
+                                              <!--  <select name="gender" class="form-control" placeholder="trans("users.gender")">
+                                                   
+                                                   <option value="1">{{trans("website.female")}}</option>
+                                                   <option value="0">{{trans("website.male")}}</option>
+                                               </select> -->
+                                                {!! $errors->first("gender", "<p class='help-block'>:message</p>") !!}
 
 
 
-                         <!-- <li><span>CONFIRM PASSORD</span> ***************</li> -->
-                         <li class=" {{ $errors->has("password_confirmation") ? "has-error" : ""}} ">
-                                        <span>    {!! Form::label("password_confirmation", trans("users.password_confirmation"), []) !!}</span>
-                                                {!! Form::text("password_confirmation", null, ["placeholder"=> trans("users.password_confirmation")]) !!}
-                                                {!! $errors->first("password_confirmation", "<p class='help-block'>:message</p>") !!}
-                                        </li>
 
+                                            </div>
+                                        </div>
+                                      
 
-                        </ul>
-                    </aside>
-                    
-                    
-                    
-                    
+                                          <div class="form-group {{ $errors->has("occupation") ? "has-error" : ""}}  col-xs-6">
+                    {!! Form::label("occupation", trans("users.occupation"), []) !!} <span class="reqrd">*</span>
+                    <div class="col-xs-12">
+                        {!! Form::select("occupation",config('array.users_occupation'), null, ["class" => "form-control","placeholder"=> trans("users.occupation")]) !!}
+                        {!! $errors->first("occupation", "<p class='help-block'>:message</p>") !!}
+                    </div>
                 </div>
-                <!-- <a href="#" class="edit_btn">EDIT ACCOUNT</a> -->
-               {!! Form::submit(trans('website.update'),['class'=>'edit_btn']) !!}
 
 
-                {!! Form::close() !!}
-            </section>
-        
-        
-        
-        
-        
-        
-        
-    </div>
+
+                <div class="form-group {{ $errors->has("mobile_company") ? "has-error" : ""}}  col-xs-6">
+                                        {!! Form::label("mobile_company", trans("users.mobile_company"), []) !!}<span class="reqrd">*</span>
+                                        <div class="col-xs-12">
+                                            {!! Form::select("mobile_company",[''=>trans('general.selectOne')]+config('array.users_mobile_company'), null, ["class" => "form-control","placeholder"=> trans("users.mobile_company")]) !!}
+                                            {!! $errors->first("mobile_company", "<p class='help-block'>:message</p>") !!}
+                                        </div>
+                                    </div>
 
 
-    </article>
-</section>
 
-                                    <!--deliveryAddress-->
-                                  <!--    <div class="tab-pane" id="tab_default_2">
+
+                                            <div class="clearfix"></div>
+
+
+                                        <center>
+
+                                            {!! Form::submit(trans('website.save'),['class'=>'btn btn-default']) !!}
+                                        </center>
+
+                                        <div class="clearfix"></div>
+                                        {!! Form::close() !!}
+
+                                    </div>
+                                     <div class="tab-pane" id="tab_default_2">
                                         <h3>{{trans('website.deliveryAddress')}}</h3>
 
 
@@ -366,7 +331,7 @@ Feel free to check, put or edit your information here as your preference.</h6>
                                                 {{$oAddressResult->building}}<br>
                                                 {{$oAddressResult->floor}}<br>
                                                 {{$oAddressResult->apartment_number}}<br>
-                                                {{$oAddressResult->directions}} -->
+                                                {{$oAddressResult->directions}}
                                                 <!-- <hr>
                                                <div class="radio">
                           <label><input name="optradio" type="radio">Default Address</label>
@@ -380,11 +345,7 @@ Feel free to check, put or edit your information here as your preference.</h6>
 
 
                                     </div> -->
-
-
-
-                             <!--order summery-->
-                                 <!--    <div class="tab-pane" id="tab_default_3">
+                                    <div class="tab-pane" id="tab_default_3">
                                         <h3>{{trans('website.orderSummary')}}</h3>
                                         <div id="accordion" class="panel-group ordr-smry">
 
@@ -406,10 +367,10 @@ Feel free to check, put or edit your information here as your preference.</h6>
                                                         <strong> {{ isset($oOrderResult->restaurant->{'name_'.config('app.locale')})? $oOrderResult->restaurant->{'name_'.config('app.locale')}:'#' }}   @if(isset($oOrderResult->address->name)), {{$oOrderResult->address->name }}  @endif </strong>
 
                                                         {{$oOrderResult->created_at }}
-                                        <span class="right">
-                                            KD: {{$oOrderResult->total }}<br>
+										<span class="right">
+											KD: {{$oOrderResult->total }}<br>
                                              {{trans('website.status')}} : {{config('array.order_status')[$oOrderResult->status] }}
-                                        </span>
+										</span>
                                                     </a>
 
                                                 </div>
@@ -513,13 +474,9 @@ Feel free to check, put or edit your information here as your preference.</h6>
 
 
                                         </div>
-                                    </div> -->
- <!--order summery-->
-
-
-
-  <!-- change password div--> 
-<!-- <div  class="tab-pane"  id="tab_default_4" >
+                                    </div>
+ 
+<div  class="tab-pane"  id="tab_default_4" >
 
   {!! Form::model($oUsers, [
                                             'method' => 'PATCH',
@@ -610,13 +567,13 @@ Feel free to check, put or edit your information here as your preference.</h6>
                                             {!! Form::label("gender", trans("users.gender"), []) !!}<span class="reqrd">*</span>
                                             <div class="col-xs-12">
                                             {!! Form::select("gender",config('array.users_gender'), null, ["class" => "form-control","placeholder"=> trans("users.gender")]) !!} 
--->
+
                                               <!--  <select name="gender" class="form-control" placeholder="trans("users.gender")">
                                                    
                                                    <option value="1">{{trans("website.female")}}</option>
                                                    <option value="0">{{trans("website.male")}}</option>
                                                </select> -->
-                                          <!--      {!! $errors->first("gender", "<p class='help-block'>:message</p>") !!}
+                                                {!! $errors->first("gender", "<p class='help-block'>:message</p>") !!}
 
 
 
@@ -627,25 +584,43 @@ Feel free to check, put or edit your information here as your preference.</h6>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  {!! Form::close() !!}
 
- </div>
- -->
- <!-- change password div--> 
+ </div><!-- change password div-->
 
 
 
-                      <!--           </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                <!--  @include('website.partials.asideMenu') -->
-          <!--   </div>
+            </div>
         </div>
 
 
-    </section> -->
+    </section>
 
 
 
@@ -670,15 +645,15 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_POSTFIELDS => $data 
 ));
-$response = curl_exec($curl);               
+$response = curl_exec($curl);				
 $err = curl_error($curl);
 curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-    //echo $response;
-    $obj = json_decode($response , true);
-    $token = $obj['token'];
+	//echo $response;
+	$obj = json_decode($response , true);
+	$token = $obj['token'];
 }
 ?>
 
@@ -696,11 +671,11 @@ if ($err) {
     <script>
         $('#insertAddressIframe').attr('src','/selectAddressFromMap?latitude='+$('#hiddenLatitudeInput').val()+'&longitude='+$('#hiddenLongitudeInput').val()+'')
     </script>
-    
-    <script>
-        // By Ibtisam alhitteh
-        $(document).ready(function(){
-            $("#paci_number").blur(function(){
+	
+	<script>
+		// By Ibtisam alhitteh
+		$(document).ready(function(){
+			$("#paci_number").blur(function(){
                             var toke ;
                                                          $.ajax({
                         type: 'POST',
@@ -708,116 +683,116 @@ if ($err) {
                         url : '{{route('getpacitoken')}}',
                         
                         success:function(data){
-                                            var token   = data;
-                var civilId = $('#paci_number').val();
+                            				var token   = data;
+				var civilId = $('#paci_number').val();
                                 
-                var lang    = "{{config("app.locale")}}";
-                fields_empty();
-                var civilId_len = civilId.length;
-                if(civilId_len==8)
-                    paci_geocoder_by_civilId(token , civilId ,lang);
-                else
-                    console.log("CivilId error");
+				var lang	= "{{config("app.locale")}}";
+				fields_empty();
+				var civilId_len = civilId.length;
+				if(civilId_len==8)
+					paci_geocoder_by_civilId(token , civilId ,lang);
+				else
+					console.log("CivilId error");
 
                         },
                         timeout:10000
                     });
 
-            });
+			});
                         
-            // Empty fields in form
-            function fields_empty(){
-                //paci_number
-                $("#paci_number").val("");
-                //block
-                $("#block").val("");
-                //street
-                $("#street").val("");
-                //avenue
-                $("#avenue").val("");
-                //building
-                $("#building").val("");
-                //floor
-                $("#floor").val("");
-                //apartment_number
-                $("#apartment_number").val("");
-                // directions
-                $('#directions').val("");
-            }
-            
-            function paci_geocoder_by_civilId (token , civilId , lang){
-                $.ajax({
-                   url: 'https://kuwaitportal.paci.gov.kw/arcgisportal/rest/services/Hosted/PACIGeocoder/FeatureServer/0/query?where=civilid='+civilId+'&returnGeometry=false&f=pjson&token='+token+'&outFields=*',
-                   data: {civilid:'', returnGeometry:"false", token:'',  f:"pjson" , outFields:"*"},
-                   error: function() {
-                      $('#info').html('<p>An error has occurred</p>');
-                   },
-                   dataType: 'json',
-                   success: function(data) { 
-                    try {
-                      var result = jQuery.parseJSON(JSON.stringify(data)); 
-                      if(result.error){
-                          console.log("Code: "+result.error.code);
-                          console.log("Message: "+result.error.message);
-                          console.log("Details: "+result.error.details);
-                          console.log("URL: "+'https://kuwaitportal.paci.gov.kw/arcgisportal/rest/services/Hosted/PACIGeocoder/FeatureServer/0/query?where=civilid='+civilId+'&returnGeometry=false&f=pjson&token='+token+'&outFields=*');
-                      }else{
-                           var features = jQuery.parseJSON(JSON.stringify(result.features[0]));
-                           if(lang=="en"){
-                                parcing_data_en(features.attributes);
-                           }else{
-                                parcing_data_ar(features.attributes);
-                           }
-                      }
-                    }
-                    catch(err) {
-                        console.log(err.message);
-                    }
-                   },
-                   type: 'GET'
-                });
-                
-            }
-    
-            function parcing_data_en (data){
-                //paci_number
-                $("#paci_number").val(data.civilid);
-                //block
-                $("#block").val(data.blockenglish);
-                //street
-                $("#street").val(data.streetenglish);
-                //avenue
-                $("#avenue").val(data.neighborhoodenglish);
-                //building
-                $("#building").val(data.buildingnameenglish);
-                //floor
-                //floor
-                $("#floor").val(data.floor_no);
-                //apartment_number      
-                $("#apartment_number").val(data.unit_no);
-                // directions
-                $('#directions').val(data.location);
-            }
-    
-            function parcing_data_ar (data){
-                //paci_number
-                $("#paci_number").val(data.civilid);
-                //block
-                $("#block").val(data.blockarabic);
-                //street
-                $("#street").val(data.streetarabic);
-                //avenue
-                $("#avenue").val(data.neighborhoodarabic);
-                //building
-                $("#building").val(data.buildingnamearabic);
-                //floor
-                $("#floor").val(data.floor_no);
-                //apartment_number      
-                $("#apartment_number").val(data.unit_no);
-                //location
-                $('#directions').val(data.location);
-            }
-        });
+			// Empty fields in form
+			function fields_empty(){
+				//paci_number
+				$("#paci_number").val("");
+				//block
+				$("#block").val("");
+				//street
+				$("#street").val("");
+				//avenue
+				$("#avenue").val("");
+				//building
+				$("#building").val("");
+				//floor
+				$("#floor").val("");
+				//apartment_number
+				$("#apartment_number").val("");
+				// directions
+				$('#directions').val("");
+			}
+			
+			function paci_geocoder_by_civilId (token , civilId , lang){
+				$.ajax({
+				   url: 'https://kuwaitportal.paci.gov.kw/arcgisportal/rest/services/Hosted/PACIGeocoder/FeatureServer/0/query?where=civilid='+civilId+'&returnGeometry=false&f=pjson&token='+token+'&outFields=*',
+				   data: {civilid:'', returnGeometry:"false", token:'',  f:"pjson" , outFields:"*"},
+				   error: function() {
+					  $('#info').html('<p>An error has occurred</p>');
+				   },
+				   dataType: 'json',
+				   success: function(data) { 
+					try {
+					  var result = jQuery.parseJSON(JSON.stringify(data)); 
+					  if(result.error){
+						  console.log("Code: "+result.error.code);
+						  console.log("Message: "+result.error.message);
+						  console.log("Details: "+result.error.details);
+						  console.log("URL: "+'https://kuwaitportal.paci.gov.kw/arcgisportal/rest/services/Hosted/PACIGeocoder/FeatureServer/0/query?where=civilid='+civilId+'&returnGeometry=false&f=pjson&token='+token+'&outFields=*');
+					  }else{
+						   var features = jQuery.parseJSON(JSON.stringify(result.features[0]));
+						   if(lang=="en"){
+								parcing_data_en(features.attributes);
+						   }else{
+								parcing_data_ar(features.attributes);
+						   }
+					  }
+					}
+					catch(err) {
+						console.log(err.message);
+					}
+				   },
+				   type: 'GET'
+				});
+				
+			}
+	
+			function parcing_data_en (data){
+				//paci_number
+				$("#paci_number").val(data.civilid);
+				//block
+				$("#block").val(data.blockenglish);
+				//street
+				$("#street").val(data.streetenglish);
+				//avenue
+				$("#avenue").val(data.neighborhoodenglish);
+				//building
+				$("#building").val(data.buildingnameenglish);
+				//floor
+				//floor
+				$("#floor").val(data.floor_no);
+				//apartment_number		
+				$("#apartment_number").val(data.unit_no);
+				// directions
+				$('#directions').val(data.location);
+			}
+	
+			function parcing_data_ar (data){
+				//paci_number
+				$("#paci_number").val(data.civilid);
+				//block
+				$("#block").val(data.blockarabic);
+				//street
+				$("#street").val(data.streetarabic);
+				//avenue
+				$("#avenue").val(data.neighborhoodarabic);
+				//building
+				$("#building").val(data.buildingnamearabic);
+				//floor
+				$("#floor").val(data.floor_no);
+				//apartment_number		
+				$("#apartment_number").val(data.unit_no);
+				//location
+				$('#directions').val(data.location);
+			}
+		});
 
-    </script>
+	</script>
     @stop

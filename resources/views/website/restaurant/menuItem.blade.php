@@ -4,13 +4,14 @@
 
     {{--@include('website.partials.innerSearch',['title'=>trans('website.menuIteminfo').'<br><span>'.trans('website.detailsinfo').'</span>','img'=>'/assets/website/images/current_order.png','icon'=>'fa fa-list','request'=>$request])--}}
 
-    <style type="text/css">
-        .col-sm-3{
-            float: right !important;
-        }
-        .color-black{color: black}
 
-    </style>
+<style type="text/css">
+    .col-sm-3{
+        float: right !important;
+    }
+    .color-black{color: black}
+
+</style>
 
     <article class="container">
         <div class="inn_caption">
@@ -25,7 +26,7 @@
         <article class="container">
             <div class="content_wrapper">
                 <div class="captions_sec">
-                    <div class="icon_in"><img src="images/shop-icon.png" alt=""></div>
+                    <div class="icon_in"><img src="/assets/website/images/shop-icon.png" alt=""></div>
                     <h2>Welcome To Our Dishs</h2>
                     <h6>Lorem Ipsum is simply dummy text of the printing</h6>
                 </div>
@@ -33,74 +34,48 @@
                     <div class="row mostsellingwrap">
                         @if(count($oResults))
                             @foreach($oResults as $oResult)
-                                {!! Form::open(['route'=>'order.create','method'=>'get','class'=>'xxx_ajaxForm a']) !!}
-                                <aside class="col-md-4">
-                                    <div class="most_selling_dt"> <img src="{{$oResult->img}}" alt="">
-
-                                        <div class="most_selling_dt_text">
-                                            <h3><a href="/dish/{{$oResult->id}}" class="color-black">{{$oResult->name_en}}</a> </h3>
-                                            <p>Fresh Meat Start Price:</p>
-                                            <div class="price">{{$oResult->price}} KD <span>{{ isset($oResult->price_befor)? $oResult->price_befor:''}} </span></div>
-                                            {{--<div class="icon_stars">--}}
-                                                {{--<span class="star glyphicon glyphicon-star-empty"></span>--}}
-                                                {{--<span class="star glyphicon glyphicon-star-empty"></span>--}}
-                                                {{--<span class="star glyphicon glyphicon-star-empty"></span>--}}
-                                                {{--<span class="star glyphicon glyphicon-star-empty"></span>--}}
-                                                {{--<span class="star glyphicon glyphicon-star-empty"></span>--}}
-                                            {{--</div>--}}
-                                             <div class="stars_main"> <div id="stars"  data-id="{{$oResult->id}}"  data-model="dish" data-rating="{{$oResult->rating}}"class="starrr"></div> </div>
-
-
-
-                                            <div class="btn_dt">
-
-                                                @if($oResult->quantity > 0)
-                                                <div class="sp-quantity2">
-                                                    <div class="sp-minus2 fff"> <a class="ddd" href="#/home">-</a> </div>
-                                                    <div class="sp-input2">
-                                                        <input type="text" name="quantity" class="quntity-input" value="1" id="new_val" />
-                                                    </div>
-                                                    <div class="sp-plus2 fff"> <a class="ddd" href="#/home">+</a> </div>
-                                                </div>
-                                                <div class="cap-box">
-                                                    {{--<h2><a href="#" onclick="document.getElementsByClassName('a').submit();"> <img src="images/cart-icon.png"> ADD TO CART </a></h2>--}}
-
-                                                    <h2>   <input type="submit" value="ADD TO CART " style="background-color: #a90017;border: none;outline: none;"> </h2>
+                            {!! Form::open(['route'=>'order.create','id'=>'f','method'=>'get','class'=>'xxx_ajaxForm']) !!}
+                        <aside class="col-md-4">
+                            <div class="most_selling_dt"> <img src="{{$oResult->img}}" alt="">
+                                <div class="most_selling_dt_text">
+                                    <h3><a href="/dish/{{$oResult->id}}" class="color-black">{{$oResult->name_en}}</a> </h3>
+                                    <p>Fresh Meat Start Price:</p>
+                                    <div class="price">{{$oResult->price}} KD <span>{{ isset($oResult->price_befor)? $oResult->price_befor:''}} </span></div>
+                                   <div class="icon_stars">
+                                    <span class="star glyphicon glyphicon-star-empty"></span>
+                                     <span class="star glyphicon glyphicon-star-empty"></span> 
+                                     <span class="star glyphicon glyphicon-star-empty"></span>
+                                      <span class="star glyphicon glyphicon-star-empty"></span>
+                                       <span class="star glyphicon glyphicon-star-empty"></span>
+                                        </div> 
+<!--  <div class="stars_main"> <div id="stars"  data-id="{{$oResult->id}}"  data-model="dish" data-rating="{{$oResult->rating}}"class="starrr"></div> </div>  -->
+                                 
 
 
+                                    <div class="btn_dt">
 
 
-                                                </div>
-                                                @endif
+                                        <div class="sp-quantity2">
+                                            <div class="sp-minus2 fff"> <a class="ddd" href="#/home">-</a> </div>
+                                            <div class="sp-input2">
+                                                <input type="text" name="quantity" class="quntity-input" value="1" id="new_val" />
                                             </div>
+                                            <div class="sp-plus2 fff"> <a class="ddd" href="#/home">+</a> </div>
                                         </div>
-                                        {!! Form::hidden('dish_id',$oResult->id) !!}
-                                        {!! Form::close() !!}
+                                        <div class="cap-box">
+                                            <h2><a href="#" onclick="document.getElementById('f').submit();"> <img src="images/cart-icon.png"> ADD TO CART </a></h2>
+
+
+
+
+                                            
+                                        </div>
                                     </div>
-                                </aside>
-
-                            @endforeach
-
-                        @endif
-
-
-
-                    </div>
-                </section>
-            </div>
-        </article>
-    </section>
-
-
-
-
-
-
-
-
-    {!! HTML::script('/assets/website/js/jquery.smoove.js')!!}
-    {!! HTML::script('/assets/website/js/jquery1.11.3.min.js')!!}
-
+                                </div>
+                                {!! Form::hidden('dish_id',$oResult->id) !!}
+                        {!! Form::close() !!}
+                            </div>
+                        </aside>
 
 
     <script>
@@ -134,6 +109,41 @@
         });
     </script>
 
+    {!! HTML::script('/assets/website/js/jquery.smoove.js')!!}
+    {!! HTML::script('/assets/website/js/jquery1.11.3.min.js')!!}
+
+
+
+    <script>
+        $(".ddd").on("click", function () {
+
+            var $button = $(this);
+            var oldValue = $button.closest('.sp-quantity2').find("input.quntity-input").val();
+
+            if ($button.text() == "+") {
+                var newVal = parseFloat(oldValue) + 1;
+                var x = document.getElementById("new_val").value =newVal;
+               
+            } else {
+                // Don't allow decrementing below zero
+                if (oldValue > 0) {
+                    var newVal = parseFloat(oldValue) - 1;
+                var x = document.getElementById("new_val").value =newVal;
+
+                // alert( x);
+
+                } else {
+                    newVal = 0;
+                }
+                 }
+
+            $button.closest('.sp-quantity2').find("input.quntity-input").val(newVal);
+
+
+ 
+        });
+    </script>
+     
 
 
 

@@ -12,6 +12,9 @@ Route::post('login', [
     'uses' => 'common\authentication\AuthController@postLogin'
 ]);
 
+
+
+
 Route::get('mt4-signup', [
     'before'=>'changeLanguage',
     'as' => 'client.auth.mt4Signup',

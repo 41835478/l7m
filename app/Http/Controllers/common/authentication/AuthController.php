@@ -480,6 +480,11 @@ class AuthController extends Controller
         return Redirect::intended('/users');
     }
 
+
+
+
+
+
 //    public function getTwitterLogin()
 //    {
 //

@@ -23,13 +23,19 @@ return true;
 public function rules()
 {
 return [
-    "first_name"=>'required',
-    "last_name"=>'required',
-//    "email"=>'required',
-    "mobile"=>'required|numeric',
-    "phone"=>'required|numeric',
-    "gender"=>'required',
 
+  
+    // "phone"=>'required|numeric',
+    // "gender"=>'required',
+
+  "first_name"=>'required',
+    "last_name"=>'required',
+    "email"=>'required|email|unique:users',
+            "password"=>'required|confirmed',
+            'password_confirmation'=> 'required',
+            'address'=>'required',
+            "mobile"=>'required|min:4|numeric',
+               "area_id"=>'required',
 
 
 ];

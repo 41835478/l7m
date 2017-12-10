@@ -51,10 +51,11 @@ return [
 'username'=>'username',
 'type'=>'type',
 
-
+'address'=>'ADDRESS',
 
 'driving_license_no'=>'Driving license No',
 'civil_id'=>'Civil ID',
+'area_id'=>'COUNTRY',
 
 'edit'=>'Edit',
 'delete'=>'Delete'

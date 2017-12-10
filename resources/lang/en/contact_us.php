@@ -3,6 +3,7 @@ return [
 
 'contact_usCreate'=>'Create Contact Us ',
     'addcontact_us'=>'Add Contact Us',
+   'inquiryForm' =>'<span>Feedback</span> / Inquiry form',
     'editcontact_us'=>'Edit Contact Us',
     'contact_usInfo'=>'Contact Us Info',
 
@@ -31,6 +32,9 @@ return [
 
     'updated_at'=>'Updated At',
 
-
+'contactForm'=>'Thank you for reaching us, please feel free to stay in touch with us by sharing your feedback or any enquiry you have. 
+Your request will be send to the consultant and they will be in touch with you soon.',
+'feedbackForm'=>'Thank you for reaching us,
+please feel free to stay in touch with us by sharing your feedback or any enquiry you have.'
 
 ];

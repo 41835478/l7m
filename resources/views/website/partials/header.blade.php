@@ -13,7 +13,7 @@
         <header>
             <div class="top-nav">
                 <ul>
-                    <li>  <a class="sign" @if(isset(current_user()->getUser()->id)) title="logout" href="/logout" @else  data-toggle="modal" title="Login" data-target="#myModal" href="#" @endif> Sign In</a>
+                    <li>  <a class="sign" @if(isset(current_user()->getUser()->id)) title="logout" href="/logout" @else  data-toggle="modal" title="Login"  href="/signin" @endif> Sign In</a>
                     </li>
                     <li><a href="/users/create" class="reg">New User</a></li>
 

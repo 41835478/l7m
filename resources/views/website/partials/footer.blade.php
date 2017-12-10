@@ -36,16 +36,16 @@
                 <div class="st_links">
                     <h2>STATIC LINKS </h2>
                     <ul>
-                        <li><a href="#">About us </a></li>
-                        <li><a href="contact-us.html">Contact us</a></li>
-                        <li><a href="#">Add L7m Shop</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="/about">{{trans('website.aboutUs')}}</a></li>
+                        <li><a href="/contact_us/create">{{trans('website.contact_us')}}</a></li>
+                        <li><a href="/restaurant/create">{{trans('website.addShop')}}</a></li>
+                        <li><a href="/feedback">{{trans('website.feedBack')}}</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="faq.html">FAQs </a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="/Terms">{{trans('website.termsCondition')}}</a></li>
+                        <li><a href="/faq">{{trans('website.faq')}} </a></li>
+                        <li><a href="/privacy">{{trans('website.privacyPolicy')}}</a></li>
+                        <li><a href="/sitemap">{{trans('website.sitemap')}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,10 +54,10 @@
                     <h2>fOLLOW US</h2>
                     <p>Follow us on social media for getting latest informations.</p>
                     <ul>
-                        <li><a href="#" class="icon1" title="facebook">&nbsp;</a></li>
-                        <li><a href="#" class="icon2" title="twitter">&nbsp;</a></li>
-                        <li><a href="#" class="icon3" title="YouTube">&nbsp;</a></li>
-                        <li><a href="#" class="icon4" title="Instagram">&nbsp;</a></li>
+                        <li><a href="http://www.facebook.com" class="icon1" title="facebook">&nbsp;</a></li>
+                        <li><a href="http://www.twitter.com" class="icon2" title="twitter">&nbsp;</a></li>
+                        <li><a href="http://www.youtube.com" class="icon3" title="YouTube">&nbsp;</a></li>
+                        <li><a href="http://www.instagram.com" class="icon4" title="Instagram">&nbsp;</a></li>
                     </ul>
                 </div>
             </div>

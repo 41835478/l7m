@@ -30,7 +30,9 @@ class createRequest extends Request
     "email"=>'required|email',
 
     "telephone"=>'required|numeric',
-    "address_en"=>'required',
+    // "address_en",
+    "description_en"=>'required',
+    "cuisines"=>'required',
 
 
 

@@ -3,38 +3,57 @@
 @section('title', Lang::get('dashboard.PageTitle'))
 @section('content')
 
-    @include('website.partials.innerSearch',['title'=>trans('website.forget').' <br><span>'.trans('website.password').'</span>','img'=>'/assets/website/images/contact-ico.png','icon'=>'fa fa-list'])
+    @include('website.partials.innerSearch',['title'=>trans('website.forgetPassword'),'img'=>'/assets/website/images/add_new_shop.png','icon'=>'fa fa-list'])
+    <!--,'title2'=>trans('website.signForm')-->
 
 
-
-    <section class="inner_content_area">
-        <div class="container">
+<section class="inner-wrapper">
+    <article class="container">
+    
+    <div class="content_wrapper">
+   <!--      <div class="captions_sec">
+            <div class="icon_in"><img src="images/add_new_shop.png" alt=""></div>
+            
+            <h6>Simply provide us your email address , you have entered at the time of registration. <br/>
+We'll send your password to the Email Address.</h6>
+        </div> -->
+        
+        <section class="sub-wrapper">
             <div class="row">
-                <div class="col-sm-12">
+            <div class="col-md-6 col-sm-10 col-md-offset-3 col-sm-offset-1">
+                <div class="log-wrap">
+                     {!! Form::open([]) !!}
 
-                    <div class="forgot-password col-sm-6 col-sm-offset-3">
-                        {!! Form::open([]) !!}
-                            <div class="form-group">
+                     @include('common.partials.messages')
 
-                                @include('common.partials.messages')
+                     <!--    <input type="password" placeholder="Email Address" class="text_box5"/> -->
+                        
+                   <input type="text" class="text_box5" id="uLogin" placeholder="{{trans('website.emailAddress')}}" name="email">
 
-                                <label>{{trans('website.enterEmailToReset')}}</label>
-                                <input type="text" class="form-control" id="uLogin" placeholder="{{trans('website.email')}}" name="email">
-                                <hr>
-                                <button type="submit" class="btn btn-primary">{{trans('website.submit')}}</button>
-                            </div> <!-- /.form-group -->
 
-                      {!! Form::close()  !!}
+                        <!-- <input type="submit" class="submit_btn" value="SUBMIT"> -->
+                        
+                         <button type="submit" class="submit_btn">{{trans('website.submit')}}</button>
+                        
 
-                    </div> <!-- /.modal-body -->
-
+                     {!! Form::close()  !!}
+                    
                 </div>
-
+                
+                
             </div>
+            
+            
+            
         </div>
+        </section>
+        
+        
+    </div>
 
 
-    </section>
+    </article>
+</section>
 
 
 @stop

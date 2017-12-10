@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 class Users extends Model
 {
     protected $fillable = [
-       "email","guest_email","username","mobile_company","driving_license_no","civil_id","password","permissions","first_name","last_name","avatar",'mobile','phone','gender','occupation','type','lat','long','session_id' ,'android_device_id','ios_device_id' ];
+       "email","guest_email","username","mobile_company","driving_license_no","civil_id","password","permissions","first_name","last_name","avatar",'mobile','phone','gender','occupation','type','lat','long','session_id' ,'android_device_id','ios_device_id','address','password_confirmation' ,'area_id'];
+
     protected $table='users';
 
     public $timestamps =false ;
