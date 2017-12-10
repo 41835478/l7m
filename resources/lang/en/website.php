@@ -15,6 +15,7 @@ return [
     'userName'=>'User Name ',
     'l7mDetails'=>'L7M Details',
     'email'=>'Email',
+    'rememberMe'=>'Remember Me',
     'cuisines'=>'Cuisines',
     'password'=>'Password',
     'updatePass'=>'UPDATEs PASSWORD',
