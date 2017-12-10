@@ -116,7 +116,13 @@
 </div>
 </div>
 
-    
+            <div class="form-group {{ $errors->has("title") ? "has-error" : ""}}  col-xs-12">
+{!! Form::label("title", trans("dish_rate.title"), ["class" => "col-sm-12"]) !!}
+<div class="col-sm-12">
+    {!! Form::textarea("title", null, ["class" => "form-control","placeholder"=> trans("dish_rate.title")]) !!}
+    {!! $errors->first("title", "<p class='help-block'>:message</p>") !!}
+</div>
+</div>
 
         <div class="form-group {{ $errors->has("status") ? "has-error" : ""}}  col-xs-6">
 {!! Form::label("status", trans("dish_rate.status"), ["class" => "col-sm-4 control-label"]) !!}

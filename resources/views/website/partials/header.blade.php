@@ -16,7 +16,33 @@
                     <li>  <a class="sign" @if(isset(current_user()->getUser()->id)) title="logout" href="/logout" @else  data-toggle="modal" title="Login" data-target="#myModal" href="#" @endif> Sign In</a>
                     </li>
                     <li><a href="/users/create" class="reg">New User</a></li>
-                    <li><a href="new-user.html" class="lang"><span>5</span></a></li>
+
+
+                    <li><a href="/cart" class="lang" data-quentity="1"><span>5</span></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@inject('rCart','\App\Repositories\website\cart\EloquentCartRepository')  {{--*/ $cartNumber=0; if(isset(current_user()->getUser()->id)){ $cartNumber=$rCart->cartNumber(); } $users_id=isset(current_user()->getUser()->id)? current_user()->getUser()->id:0; /*--}}
+                    <a @if(isset(current_user()->getUser()->id)) href="/cart" data-quentity="{{($cartNumber> 0)?$cartNumber :''}}" data-success-place="#generalPopupModel  .modal-body" id="headerCartIcon"   class="aWithResponse cart headerCartIcon {{($cartNumber> 0)? '' :'hideAfterClass'}} " @else href="#" class=" cart"  data-quentity="0"  @endif ></a>
+
+
+
+
+
+
                 </ul>
             </div>
             <div class="menu-bar">
@@ -24,7 +50,7 @@
                 <div class="inn_bar">
 
 
-                    <div class="lang"><a @if(config('app.locale') =='ar')  href="?locale=en" title="en" @else href="?locale=ar" title="ar" @endif> ????  </a>
+                    <div class="lang"><a @if(config('app.locale') =='ar')  href="?locale=en" title="en" @else href="?locale=ar" title="ar" @endif> عربي  </a>
                         </div>
 
                     <!--menu-->
@@ -55,6 +81,31 @@
         </header>
     </article>
 </section>
+
+
+
+<div class="modal fade" id="messageDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title myModalLabel header" id="customerReview">{{trans('website.customerReview')}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body body">
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -101,7 +152,6 @@
 
 
 @if(false)
-
 
 <header> <!--header start-->
         <div class="container">

@@ -11,14 +11,18 @@ use Session;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
+use App\Repositories\website\dish_rate\DishRateContract as rDishRate;
 
 use App\Repositories\website\dish\DishContract as rDish;
 
 class Dish extends Controller
 {
+    private $rDishRate;
 
-    public function __construct()
+    public function __construct(rDishRate $rDishRate)
     {
+                $this->rDishRate = $rDishRate;
+
     }
     /**
      * Display a listing of the resource.
@@ -71,12 +75,22 @@ class Dish extends Controller
      *
      * @return void
      */
-    public function show($id,rDish $rDish)
+    public function show($id,rDish $rDish,rDishRate $rDishRate,Request $request)
     {
         $dish=$rDish->show($id);
+        if($dish->quantity > 0 ) {
+            $availabel="in stock";
+        }else {
+             $availabel="out of stock";
+        }
+
+ $dish_rate = $this->rDishRate->getByFilter([
+            'dish_id' => $id,
+            'status' => config('array.dish_rate_status_accepted_index')
+        ]);
 
 
-return view("website.restaurant.dish_show",['dish'=>$dish]);
+    return view("website.restaurant.dish_show",['dish'=>$dish,'availabel'=>$availabel,'dish_rate'=>$dish_rate,'request'=>$request]);
     }
 
     /**

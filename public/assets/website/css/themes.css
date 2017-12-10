@@ -28,7 +28,12 @@
 .centered-btns_nav:active {
   opacity: 1.0;
   }
-
+.stars_main {
+  font-size: 21px;
+  color: #b99025;
+  font-weight: normal;
+  text-align: center;
+}
 .centered-btns_nav.next {
   left: auto;
   background-position: right top;
