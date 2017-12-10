@@ -4,7 +4,6 @@
 
     {{--@include('website.partials.innerSearch',['title'=>trans('website.menuIteminfo').'<br><span>'.trans('website.detailsinfo').'</span>','img'=>'/assets/website/images/current_order.png','icon'=>'fa fa-list','request'=>$request])--}}
 
-
 <style type="text/css">
     .col-sm-3{
         float: right !important;
@@ -26,7 +25,7 @@
         <article class="container">
             <div class="content_wrapper">
                 <div class="captions_sec">
-                    <div class="icon_in"><img src="/assets/website/images/shop-icon.png" alt=""></div>
+                    <div class="icon_in"><img src="images/shop-icon.png" alt=""></div>
                     <h2>Welcome To Our Dishs</h2>
                     <h6>Lorem Ipsum is simply dummy text of the printing</h6>
                 </div>
@@ -77,8 +76,30 @@
                             </div>
                         </aside>
 
+@endforeach
 
-    <script>
+                            @endif
+
+
+
+                    </div>
+                </section>
+            </div>
+        </article>
+    </section>
+
+
+
+
+
+
+
+
+    {!! HTML::script('/assets/website/js/jquery.smoove.js')!!}
+    {!! HTML::script('/assets/website/js/jquery1.11.3.min.js')!!}
+
+
+ <script>
         $(".ddd").on("click", function () {
 
             var $button = $(this);
@@ -95,7 +116,7 @@
 
                   var x=  $("input.quntity-input").val=newVal;
 
-                    alert( x);
+                    // alert( x);
 
                 } else {
                     newVal = 0;
@@ -109,41 +130,6 @@
         });
     </script>
 
-    {!! HTML::script('/assets/website/js/jquery.smoove.js')!!}
-    {!! HTML::script('/assets/website/js/jquery1.11.3.min.js')!!}
-
-
-
-    <script>
-        $(".ddd").on("click", function () {
-
-            var $button = $(this);
-            var oldValue = $button.closest('.sp-quantity2').find("input.quntity-input").val();
-
-            if ($button.text() == "+") {
-                var newVal = parseFloat(oldValue) + 1;
-                var x = document.getElementById("new_val").value =newVal;
-               
-            } else {
-                // Don't allow decrementing below zero
-                if (oldValue > 0) {
-                    var newVal = parseFloat(oldValue) - 1;
-                var x = document.getElementById("new_val").value =newVal;
-
-                // alert( x);
-
-                } else {
-                    newVal = 0;
-                }
-                 }
-
-            $button.closest('.sp-quantity2').find("input.quntity-input").val(newVal);
-
-
- 
-        });
-    </script>
-     
 
 
 
