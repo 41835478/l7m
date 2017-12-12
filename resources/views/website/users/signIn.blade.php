@@ -42,7 +42,7 @@
                              {!! Form::close() !!}
 
                         <ul class="log-way">
-                            <li><a href="/facebook-login"><img src="/assets/website/images/facebook.png" alt="" title="facebook"></a></li>
+                           <li><a href="/facebook-login"><img src="/assets/website/images/facebook.png" alt="" title="facebook"></a></li>
                             <li><a href="/twitter-login"><img src="/assets/website/images/twitter.png" alt="" title="twitter"></a></li>
                             <li><a href="/google-login"><img src="/assets/website/images/google.png" alt="" title="google +"></a></li>
                         </ul>
