@@ -14,6 +14,7 @@
 'mostSellingDishes'=>'أكثر الأطباق مبيعاً',
 'login'=>'دخول',
 'nameL7m'=>'اسم لحم',
+'newUser'=>'مستخدم جديد',
 'rememberMe'=>'تذكرني',
 'myAccount'=>'حسابي',
 'cuisines'=>'المطابخ',

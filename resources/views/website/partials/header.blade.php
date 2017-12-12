@@ -13,9 +13,9 @@
         <header>
             <div class="top-nav">
                 <ul>
-                    <li>  <a class="sign" @if(isset(current_user()->getUser()->id)) title="logout" href="/logout" @else  data-toggle="modal" title="Login"  href="/signin" @endif> Sign In</a>
+                    <li>  <a class="sign" @if(isset(current_user()->getUser()->id)) title="logout" href="/logout" @else  data-toggle="modal" title="Login"  href="/signin" @endif> {{trans('website.signIn')}}</a>
                     </li>
-                    <li><a href="/users/create" class="reg">New User</a></li>
+                    <li><a title="SingUp"  @if(isset(current_user()->getUser()->id)) href="/users#tab_default_1" @else   href="/users/create" @endif>{{trans('website.newUser')}}</a></li>
                     <li><a href="new-user.html" class="lang"><span>5</span></a></li>
                 </ul>
             </div>

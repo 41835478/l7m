@@ -2,7 +2,8 @@
 @section('title', Lang::get('dashboard.PageTitle'))
 @section('content')
 
-    @include('website.partials.innerSearch',['title'=>' <span>'.trans('website.allgov').'</span>','img'=>'/assets/website/images/location-ico.png','icon'=>'fa fa-list','request'=>$request])
+    @include('website.partials.innerSearch',['title'=>' <span>'.trans('website.allgov').'</span>','img'=>'/assets/website/images/location.png','icon'=>'fa fa-list','request'=>$request])
+    <!--,'title2'=>trans('website.signForm')-->
 
 <section class="inner_content_area">
 <div class="container">
@@ -46,7 +47,7 @@
 
 
     </div>
-    <div class="col-sm-3">
+ <!--    <div class="col-sm-3">
     	<section class="in-section">
         	<h3>IN THIS SECTION</h3>
             <ul>
@@ -58,7 +59,7 @@
                 <li><a href="#">Menues will be here</a></li>
             </ul>
         </section>
-    </div>
+    </div> -->
     
 </div>
 </div>
