@@ -30,25 +30,33 @@
     @if(config('app.locale')=='ar')
 
     {!! HTML::style('/assets/website/css/ar/bootstrap.css') !!}
-    {!! HTML::style('/assets/website/css/ar/custom.css') !!}
+
     @else
     {!! HTML::style('/assets/website/css/bootstrap.css') !!}
-    {!! HTML::style('/assets/website/css/custom.css') !!}
+
+        {!! HTML::style('/assets/website/css/themes.css') !!}
+
+        {!! HTML::style('/assets/website/css/owl.carousel.css') !!}
+
     @endif
 
 
-
-    {!! HTML::style('/assets/website/css/bootstrap.css') !!}
     {!! HTML::style('/assets/website/css/bootstrap-theme.css') !!}
     {!! HTML::style('/assets/website/css/main_style.css') !!}
     {!! HTML::style('/assets/website/css/responsiveslides.css') !!}
     {!! HTML::style('/assets/website/css/animate.css') !!}
+    {!! HTML::style('/assets/website/css/font-awesome.css') !!}
 
-    {!! HTML::style('/assets/website/css/themes.css') !!}
-
+    {!! HTML::style('/assets/website/css/table-css.css') !!}
 
 
     <![endif]-->
+
+
+
+    <!--slider css-->
+
+
 
 </head>
 
@@ -97,6 +105,7 @@
         <!-- jQuery -->
 {!! HTML::script('/assets/website/js/jquery.min.js') !!}
 {!! HTML::script('/assets/website/js/bootstrap.js') !!}
+{!! HTML::script('/assets/website/js/bootstrap.min.js') !!}
 
 {!! HTML::script('/assets/website/js/modernizr-1.7.min.js') !!}
 {!! HTML::script('/assets/website/js/classie.js') !!}
@@ -104,13 +113,18 @@
 {!! HTML::script('/assets/website/js/uisearch.js')!!}
 {!! HTML::script('/assets/website/js/custom.js')!!}
 {!! HTML::script('/assets/website/js/custom_js.js')!!}
-{!! HTML::script('../assets/website/js/jquery.bxslider.min.js')!!}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 {!! HTML::script('/assets/website/js/jquery.smoove.js')!!}
 {!! HTML::script('/assets/website/js/jquery1.11.3.min.js')!!}
 {!! HTML::script('/assets/website/js/owl.carousel.js')!!}
 {!! HTML::script('/assets/website/js/owl.carousel-bk.js')!!}
 {!! HTML::script('/assets/website/js/prettymaps.js')!!}
 {!! HTML::script('/assets/website/js/responsiveslides.min.js')!!}
+
+{!! HTML::script('/assets/website/js/classie.js') !!}
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+{!! HTML::script('/assets/website/js/star.js') !!}
 
 {!! HTML::script('/assets/website/js/smk-accordion.js')!!}
 
@@ -119,21 +133,7 @@
     var customerReview='{{trans('website.customerReview')}}';
     
 </script>
-{!! HTML::script('/assets/website/js/star.js') !!}
 
-
-<script>
-    $(document).ready(function(){
-        $('.bxslider').bxSlider({
-            controls: false,
-            pause:2000,
-            speed: 1000,
-            mode:'fade',
-            caption:false,
-            auto: true
-        });
-    });
-</script>
 
 <script>
    // new UISearch( document.getElementById( 'sb-search' ) );
@@ -274,6 +274,7 @@
         event.stopPropagation();
     });
 </script>
+
 
 {!! HTML::script('/assets/website/js/getAddress.js') !!}
 @show

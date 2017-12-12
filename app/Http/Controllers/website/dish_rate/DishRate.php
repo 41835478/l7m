@@ -98,6 +98,7 @@ class DishRate extends Controller
             'dish_id' => $request->id,
             'status' => config('array.dish_rate_status_accepted_index')
         ]);
+        
         return new JsonResponse([
             'totalRate' => $totalRate,
             'status' => 'success',

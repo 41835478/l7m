@@ -25,7 +25,7 @@
         <article class="container">
             <div class="content_wrapper">
                 <div class="captions_sec">
-                    <div class="icon_in"><img src="/assets/website/images/shop-icon.png" alt=""></div>
+                    <div class="icon_in"><img src="images/shop-icon.png" alt=""></div>
                     <h2>Welcome To Our Dishs</h2>
                     <h6>Lorem Ipsum is simply dummy text of the printing</h6>
                 </div>
@@ -99,8 +99,7 @@
     {!! HTML::script('/assets/website/js/jquery1.11.3.min.js')!!}
 
 
-
-    <script>
+ <script>
         $(".ddd").on("click", function () {
 
             var $button = $(this);
@@ -108,28 +107,29 @@
 
             if ($button.text() == "+") {
                 var newVal = parseFloat(oldValue) + 1;
-                var x = document.getElementById("new_val").value =newVal;
-               
+                $("input.quntity-input").val=newVal;
             } else {
                 // Don't allow decrementing below zero
                 if (oldValue > 0) {
                     var newVal = parseFloat(oldValue) - 1;
-                var x = document.getElementById("new_val").value =newVal;
 
-                // alert( x);
+
+                  var x=  $("input.quntity-input").val=newVal;
+
+                    // alert( x);
 
                 } else {
                     newVal = 0;
                 }
-                 }
+            }
 
             $button.closest('.sp-quantity2').find("input.quntity-input").val(newVal);
 
 
- 
+
         });
     </script>
-     
+
 
 
 

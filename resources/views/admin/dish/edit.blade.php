@@ -249,6 +249,75 @@
                                             </div>
                                         </div>
 
+
+           <div class="form-group {{ $errors->has("description") ? "has-error" : ""}}  col-xs-12">
+{!! Form::label("description", trans("dish.description"), ["class" => "col-sm-12"]) !!}
+<div class="col-sm-12">
+    {!! Form::textarea("description", null, ["class" => "form-control","placeholder"=> trans("dish.description")]) !!}
+    {!! $errors->first("description", "<p class='help-block'>:message</p>") !!}
+</div>
+</div>
+
+
+
+
+ <div class="form-group {{ $errors->has("review_ar") ? "has-error" : ""}}  col-xs-12">
+{!! Form::label("review_ar", trans("dish.review_ar"), ["class" => "col-sm-12"]) !!}
+<div class="col-sm-12">
+    {!! Form::textarea("review_ar", null, ["class" => "form-control","placeholder"=> trans("dish.review_ar")]) !!}
+    {!! $errors->first("review_ar", "<p class='help-block'>:message</p>") !!}
+</div>
+</div>
+
+
+
+ <div class="form-group {{ $errors->has("review_en") ? "has-error" : ""}}  col-xs-12">
+{!! Form::label("review_en", trans("dish.review_en"), ["class" => "col-sm-12"]) !!}
+<div class="col-sm-12">
+    {!! Form::textarea("review_en", null, ["class" => "form-control","placeholder"=> trans("dish.review_en")]) !!}
+    {!! $errors->first("review_en", "<p class='help-block'>:message</p>") !!}
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="form-group {{ $errors->has("short_discrib_en") ? "has-error" : ""}}  col-xs-12">
+{!! Form::label("short_discrib_en", trans("dish.short_discrib_en"), ["class" => "col-sm-12"]) !!}
+<div class="col-sm-12">
+    {!! Form::textarea("short_discrib_en", null, ["class" => "form-control","placeholder"=> trans("dish.short_discrib_en")]) !!}
+    {!! $errors->first("short_discrib_en", "<p class='help-block'>:message</p>") !!}
+</div>
+</div>
+
+
+
+
+
+    <div class="form-group {{ $errors->has("short_discrib_ar") ? "has-error" : ""}}  col-xs-12">
+{!! Form::label("short_discrib_ar", trans("dish.short_discrib_ar"), ["class" => "col-sm-12"]) !!}
+<div class="col-sm-12">
+    {!! Form::textarea("short_discrib_ar", null, ["class" => "form-control","placeholder"=> trans("dish.short_discrib_ar")]) !!}
+    {!! $errors->first("short_discrib_ar", "<p class='help-block'>:message</p>") !!}
+</div>
+</div>
+
 <div class="form-group {{ $errors->has("nutrition_facts") ? "has-error" : ""}}  col-xs-12">
                                             {!! Form::label("nutrition_facts", trans("dish.nutrition_facts"), ["class" => "col-sm-12"]) !!}
                                             <div class="col-sm-12">

@@ -3,6 +3,7 @@ namespace App\Repositories\website\cart;
 
 use Session;
 use App\Models\Cart;
+use App\Models\Order;
 use App\Repositories\website\cart\CartContract;
 
 class EloquentCartRepository implements CartContract
@@ -101,18 +102,55 @@ $cart = Cart::findOrFail($id);
         return $cart;
     }
 
-    public function destroy($id)
+    // public function destroy($id)
+    // {
+
+    //     $result =  Cart::destroy($id);
+
+    //     if ($result) {
+    //         Session::flash('flash_message', 'cart deleted!');
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+
+
+ public function destroy($id)
     {
+
+
+        $cart = Cart::findOrFail($id);
 
         $result =  Cart::destroy($id);
 
         if ($result) {
-            Session::flash('flash_message', 'cart deleted!');
+           // Session::flash('flash_message', 'cart deleted!');
+            $otherCart=Cart::where('order_id','=',$cart->order_id)->count();
+            if($otherCart ==0){
+                Order::destroy($cart->order_id);
+            }
             return true;
         } else {
             return false;
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function update($id,$data)
     {
@@ -126,5 +164,18 @@ $cart = Cart::findOrFail($id);
         }
 
     }
+
+
+
+       public function cartNumber(){
+
+        $cartNumber=Cart::join('order','order.id','=','cart.order_id')->where([
+            'order.users_id'=>current_user()->getUser()->id,
+                'order.status'=>config('array.order_status_pending_index')
+        ])
+            ->where('cart.id','=',0)->sum('quantity');
+        return $cartNumber;
+    }
+
 
 }

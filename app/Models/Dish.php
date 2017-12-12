@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dish extends Model
 {
     protected $fillable = [
-       "id","name_en","name_ar","restaurant_id","best_seller","cuisine_id","menu_section_id","category_id","price_befor","delivery_menu_id","parent_id","price","quantity","img","discount","available_from","available_to","description_en","description_ar","status","rating","created_at","updated_at"  ,"preparation_time" , "description" , "nutrition_facts" , "ingredients"    ];
+       "id","name_en","name_ar","restaurant_id","best_seller","cuisine_id","menu_section_id","category_id","price_befor","delivery_menu_id","parent_id","price","quantity","img","discount","available_from","available_to","description_en","description_ar","status","rating","created_at","updated_at"  ,"preparation_time" , "description" , "nutrition_facts" , "ingredients" ,"short_discrib_ar","short_discrib_en" ,"review_ar","review_en"  ];
     protected $table='dish';
 
     public $timestamps =true ;

@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class DishRate extends Model
 {
     protected $fillable = [
-       "id","users_id","dish_id","rate","description","status","notification","created_at","updated_at"    ];
+       "id","users_id","dish_id","rate","description","status","notification","created_at","updated_at" , "title"  ];
     protected $table='dish_rate';
 
     public $timestamps =true ;

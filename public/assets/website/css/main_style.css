@@ -1267,10 +1267,20 @@ ul.pr_list li::before{ content: ""; width: 16px; height: 16px; border-radius: 50
 
 
 
+.left-star{
+	float: left;
+}
 
 
+.float-right{
+	float: right;
+}
 
 
+.folat-left-width{
+float: left;
+width: 75%;
+}
 
 
 
