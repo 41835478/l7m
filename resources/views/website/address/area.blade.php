@@ -2,7 +2,7 @@
 @section('title', Lang::get('dashboard.PageTitle'))
 @section('content')
 
-    @include('website.partials.innerSearch',['title'=>' <span>'.trans('website.allgov').'</span>','img'=>'/assets/website/images/location.png','icon'=>'fa fa-list','request'=>$request])
+    @include('website.partials.innerSearch',['title'=>' <span>'.trans('website.allgov').'</span>','img'=>'/assets/website/images/location.png','icon'=>'fa fa-list','request'=>$request,'title2'=>trans('website.titles')])
     <!--,'title2'=>trans('website.signForm')-->
 
 <section class="inner_content_area">

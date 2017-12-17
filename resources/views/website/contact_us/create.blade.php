@@ -2,7 +2,7 @@
 @section('title', Lang::get('dashboard.PageTitle'))
 @section('content')
 
-   @include('website.partials.innerSearch',['title'=>trans('website.contact_us'),'img'=>'/assets/website/images/contact-icon.png','icon'=>'fa fa-list'])
+   @include('website.partials.innerSearch',['title'=>trans('website.contact_us'),'img'=>'/assets/website/images/contact-icon.png','icon'=>'fa fa-list','title2'=>trans('website.contact')])
 
 <!--,'title2'=>trans('contact_us.contactForm')-->
    <!-- <article class="container">

@@ -2,8 +2,8 @@
 @section('title', Lang::get('website.allrestaurants'))
 @section('content')
 
-    @include('website.partials.innerSearch',['title'=>' <span>'.trans('website.restaurants').'</span>','img'=>'/assets/website/images/current_order.png','icon'=>'fa fa-list','request'=>$request])
-
+    @include('website.partials.innerSearch',['title'=>' <span>'.trans('website.restaurants').'</span>','img'=>'/assets/website/images/current_order.png','icon'=>'fa fa-list','request'=>$request,'title2'=>trans('website.titles')])
+<!--,'title2'=>trans('website.signForm')-->
 
 
 

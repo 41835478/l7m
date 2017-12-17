@@ -255,6 +255,24 @@ return [
 'terms'=>'Terms',
 'termsCondition'=>'Terms & Conditions',
 'addressInfo'=>'<span>Address</span> information',
-'signForm'=>'Lorem Ipsum is simply dummy text of the printing',
-'titles'=>''
+'titles'=>'',
+'contact'=>'Thank you for reaching us, please feel free to stay in touch with us by sharing your feedback or any enquiry you have. 
+Your request will be send to the consultant and they will be in touch with you soon.',
+'feedbacks'=>'Thank you for reaching us,<br>
+please feel free to stay in touch with us by sharing your feedback or any enquiry you have.',
+'resturantCreate'=>'To join our corporation, please fill in the forms below and we will contact you as soon as possible',
+'title2'=>'Lorem Ipsum is simply dummy text of the printing',
+'create'=>'Welcome to My Account!<br>
+Feel free to check, put or edit your information here as your preference.',
+'forgetPass'=>'Simply provide us your email address , you have entered at the time of registration. <br/> Well send your password to the Email Address.',
+'shopping'=>'Shopping Cart',
+'shoppingCart'=>'<h2>Shopping Cart</h2>
+          <h6>To join our corporation, please fill in the forms below and we will contact you as soon as possible',
+'menu'=>'<h2>Welcome To Our Dishs</h2>
+                    <h6>Lorem Ipsum is simply dummy text of the printing',
+'resturantDish'=>'  <h2>Welcome To Our offers</h2>
+          Lorem Ipsum is simply dummy text of the printing',
+
+'resturants'=>' <h2>Welcome To Our Shops</h2>
+                   Lorem Ipsum is simply dummy text of the printing'
 ];

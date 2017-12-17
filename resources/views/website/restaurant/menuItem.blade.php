@@ -2,8 +2,8 @@
 @section('title', Lang::get('website.order'))
 @section('content')
 
-    {{--@include('website.partials.innerSearch',['title'=>trans('website.menuIteminfo').'<br><span>'.trans('website.detailsinfo').'</span>','img'=>'/assets/website/images/current_order.png','icon'=>'fa fa-list','request'=>$request])--}}
-
+   @include('website.partials.innerSearch',['title'=>trans('website.dishes'),'img'=>'/assets/website/images/shop-icon.png','icon'=>'fa fa-list','request'=>$request,'title2'=>trans('website.menu')])
+<!--,'title2'=>trans('website.signForm')-->
 <style type="text/css">
     .col-sm-3{
         float: right !important;
@@ -12,11 +12,11 @@
 
 </style>
 
-    <article class="container">
+    <!-- <article class="container">
         <div class="inn_caption">
             <h2>Dishes </h2>
         </div>
-    </article>
+    </article> -->
 
 
     <section class="inner-wrapper">
@@ -24,11 +24,11 @@
 
         <article class="container">
             <div class="content_wrapper">
-                <div class="captions_sec">
+              <!--   <div class="captions_sec">
                     <div class="icon_in"><img src="images/shop-icon.png" alt=""></div>
                     <h2>Welcome To Our Dishs</h2>
                     <h6>Lorem Ipsum is simply dummy text of the printing</h6>
-                </div>
+                </div> -->
                 <section class="mostselling-listing">
                     <div class="row mostsellingwrap">
                         @if(count($oResults))

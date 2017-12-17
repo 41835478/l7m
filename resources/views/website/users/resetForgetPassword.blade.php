@@ -3,7 +3,7 @@
 @section('title', Lang::get('dashboard.PageTitle'))
 @section('content')
 
-    @include('website.partials.innerSearch',['title'=> trans('website.changepassword'),'img'=>'/assets/website/images/add_new_shop.png','icon'=>'fa fa-list'])
+    @include('website.partials.innerSearch',['title'=> trans('website.changepassword'),'img'=>'/assets/website/images/add_new_shop.png','icon'=>'fa fa-list','title2'=>trans('website.title2')])
 <!--,'title2'=>trans('website.signForm')-->
 
 

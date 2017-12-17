@@ -2,15 +2,15 @@
 @section('title', Lang::get('website.allrestaurants'))
 @section('content')
 
+ @include('website.partials.innerSearch',['title'=>trans('website.shopping'),'img'=>'/assets/website/images/add_new_shop.png','icon'=>'fa fa-list','title2'=>trans('website.shoppingCart')])
 
 
 
-
-<article class="container">
+<!-- <article class="container">
       <div class="inn_caption">
         <h2>Shopping Cart</h2>
       </div>
-    </article>
+    </article> -->
 
 
 
@@ -23,11 +23,11 @@
  <section class="inner-wrapper">
     <article class="container">
       <div class="content_wrapper">
-        <div class="captions_sec">
+       <!--  <div class="captions_sec">
           <div class="icon_in"><img src="/asstes/website/images/add_new_shop.png" alt=""></div>
           <h2>Shopping Cart</h2>
           <h6>To join our corporation, please fill in the forms below and we will contact you as soon as possible</h6>
-        </div>
+        </div> -->
 
 
 

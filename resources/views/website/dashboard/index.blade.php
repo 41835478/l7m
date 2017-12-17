@@ -252,7 +252,7 @@
                         <aside class="col-md-5">
                             <h5>Browse By L7M Shop</h5>
                         </aside>
-                        <aside class="col-md-7">
+                        <aside class="col-md-7" >
 
                             {!! Form::open(['route'=>'dish.index','method'=>'get','id'=>'dishSearchForm']) !!}
 

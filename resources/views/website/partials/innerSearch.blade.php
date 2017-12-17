@@ -19,9 +19,9 @@
     <div class="content_wrapper">
         <div class="captions_sec">
             <div class="icon_in"><img src="{!! $img !!}" alt="icon"></div>
-            <!--  <h6>
-         {{--   {!! $title2 !!} --}}
-        </h6> -->
+             <h6>
+            {!! $title2 !!} 
+        </h6>
         </div>
     </div>
 </article>

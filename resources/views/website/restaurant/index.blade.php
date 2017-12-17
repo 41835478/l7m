@@ -2,10 +2,10 @@
 @section('title', Lang::get('website.allrestaurants'))
 @section('content')
 
-    {{--@include('website.partials.innerSearch',['title'=>' <span>'.trans('website.restaurants').'</span>','img'=>'/assets/website/images/current_order.png','icon'=>'fa fa-list','request'=>$request] )--}}
+   @include('website.partials.innerSearch',['title'=>' <span>'.trans('website.restaurants').'</span>','img'=>'/assets/website/images/shop-icon.png','icon'=>'fa fa-list','request'=>$request,'title2'=>trans('website.resturants')] )
+<!--,'title2'=>trans('website.signForm')-->
 
-
-    <article class="container">
+<!--     <article class="container">
         <div class="inn_caption">
 
 
@@ -19,7 +19,7 @@
 
 
         </div>
-    </article>
+    </article> -->
 
 
 
@@ -95,11 +95,11 @@
         <article class="container">
 
             <div class="content_wrapper">
-                <div class="captions_sec">
+           <!--      <div class="captions_sec">
                     <div class="icon_in"><img src="assets/website/images/shop-icon.png" alt=""></div>
                     <h2>Welcome To Our Shops</h2>
-                    {{--<h6>Lorem Ipsum is simply dummy text of the printing</h6>--}}
-                </div>
+                    <h6>Lorem Ipsum is simply dummy text of the printing</h6>
+                </div> -->
                 @if(count($oResults))
                 <section class="shop-listing">
                     <div class="row shopwrap">

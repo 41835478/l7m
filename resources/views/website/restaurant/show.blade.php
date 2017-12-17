@@ -2,8 +2,8 @@
 @section('title', Lang::get('dashboard.PageTitle'))
 @section('content')
 
-    {{--@include('website.partials.innerSearch',['title'=>' '.trans('website.restaurant').' <br><span>'.$restaurant->{'name_'.config('app.locale')}.'</span>','img'=>'/assets/website/images/add-ico.png','icon'=>'fa fa-list'])--}}
-
+    {{--@include('website.partials.innerSearch',['title'=>' '.trans('website.restaurant').' <br><span>'.$restaurant->{'name_'.config('app.locale')}.'</span>','img'=>'/assets/website/images/add-ico.png','icon'=>'fa fa-list','title2'=>trans('website.titles')])--}}
+<!--,'title2'=>trans('website.signForm')-->
 
         <article class="container">
             <div class="inn_caption">
@@ -191,23 +191,23 @@
                         <aside class="col-md-12">
 
 
-                            <div class="shop-detail">
+                            <div class="shop-detail" style="width: 100%">
                                 <div class="thumb"> <img src="{{$restaurant->img}}" alt=""> </div>
                             </div>
 
-                            <div class="shop-detail">
+                           <!--  <div class="shop-detail">
                                 <div class="address thumb inn_bx" style="background: #a90017">
 
 
                                 </div>
-                            </div>
+                            </div> -->
                         </aside>
                     </div>
                     <div class="row shop-detail-wrap">
                         <aside class="col-md-12">
                             <div class="about-col">
                                 <h3>About <span>shop</span></h3>
-                           <p> {{$restaurant->description_en}}  </p>
+                           <p> {{$restaurant->{'description_'.config('app.locale')} }}  </p>
                             </div>
                         </aside>
                     </div>

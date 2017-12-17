@@ -12,21 +12,13 @@
     <article class="container">
         <header>
             <div class="top-nav">
-                <ul>
-                    <li>  <a class="sign" @if(isset(current_user()->getUser()->id)) title="logout" href="/logout" @else  data-toggle="modal" title="Login"  href="/signin" @endif> {{trans('website.signIn')}}</a>
-                    </li>
-                    <li><a title="SingUp"  @if(isset(current_user()->getUser()->id)) href="/users#tab_default_1" @else   href="/users/create" @endif>{{trans('website.newUser')}}</a></li>
-                  <!--   <li><a href="new-user.html" class="lang"><span>5</span></a></li> -->
-                  <!--   <li><a href="/users/create" class="reg">New User</a></li> -->
-
-
-                    <li><a href="/cart" class="lang" data-quentity="1"><span>5</span></a></li>
-
-
-@inject('rCart','\App\Repositories\website\cart\EloquentCartRepository')  {{--*/ $cartNumber=0; if(isset(current_user()->getUser()->id)){ $cartNumber=$rCart->cartNumber(); } $users_id=isset(current_user()->getUser()->id)? current_user()->getUser()->id:0; /*--}}
-                    <a @if(isset(current_user()->getUser()->id)) href="/cart" data-quentity="{{($cartNumber> 0)?$cartNumber :''}}" data-success-place="#generalPopupModel  .modal-body" id="headerCartIcon"   class="aWithResponse cart headerCartIcon {{($cartNumber> 0)? '' :'hideAfterClass'}} " @else href="#" class=" cart"  data-quentity="0"  @endif ></a>
-
-                </ul>
+              <ul>
+            <li><a  class="sign"@if(isset(current_user()->getUser()->id)) title="logout" href="/logout" @else  data-toggle="modal" title="Login"  href="/signin" @endif> {{trans('website.signIn')}}</a></li>
+            <li><a  class="reg"  @if(isset(current_user()->getUser()->id)) href="/users#tab_default_1" @else   href="/users/create" @endif>{{trans('website.newUser')}}</a></li>
+            <li><a href="/cart" class="lang"><span>5</span></a></li>      
+         @inject('rCart','\App\Repositories\website\cart\EloquentCartRepository')  {{--*/ $cartNumber=0; if(isset(current_user()->getUser()->id)){ $cartNumber=$rCart->cartNumber(); } $users_id=isset(current_user()->getUser()->id)? current_user()->getUser()->id:0; /*--}}
+                  <!--   <a @if(isset(current_user()->getUser()->id)) href="/cart" data-quentity="{{($cartNumber> 0)?$cartNumber :''}}" data-success-place="#generalPopupModel  .modal-body" id="headerCartIcon"   class="aWithResponse cart headerCartIcon {{($cartNumber> 0)? '' :'hideAfterClass'}} " @else href="#" class=" cart"  data-quentity="0"  @endif ></a> -->
+        </ul>
             </div>
             <div class="menu-bar">
                 <div class="logo"><a href="/"> <img src="/assets/website/images/logo.png" alt="logo"></a></div>

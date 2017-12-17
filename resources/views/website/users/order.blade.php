@@ -2,7 +2,7 @@
 @section('title', Lang::get('website.checkout'))
 @section('content')
 
-    @include('website.partials.innerSearch',['title'=>trans('website.orderConfirmationHtml'),'img'=>'/assets/website/images/order-ico.png','icon'=>'fa fa-list'])
+    @include('website.partials.innerSearch',['title'=>trans('website.orderConfirmationHtml'),'img'=>'/assets/website/images/cart-icon.png','icon'=>'fa fa-list','title2'=>trans('website.titles')])
 
 <style type="text/css">
     
@@ -611,7 +611,7 @@
                     </div>
                 </div>
 
-                @include('website.partials.asideMenu')
+            <!--     @include('website.partials.asideMenu') -->
             </div>
         </div>
 

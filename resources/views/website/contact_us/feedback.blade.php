@@ -2,7 +2,7 @@
 @section('title', Lang::get('dashboard.feedback'))
 @section('content')
 
-    @include('website.partials.innerSearch',['title'=>'feedback <br><span></span>','img'=>'/assets/website/images/contact-ico.png','icon'=>'fa fa-list'])
+    @include('website.partials.innerSearch',['title'=>'feedback <br><span></span>','img'=>'/assets/website/images/contact-ico.png','icon'=>'fa fa-list','title2'=>trans('website.feedbacks')])
 <!--,'title2'=>trans('contact_us.feedbackForm')-->
 
 

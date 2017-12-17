@@ -2,7 +2,7 @@
 @section('title', Lang::get('website.mostSelling'))
 @section('content')
 
-    @include('website.partials.innerSearch',['title'=>((isset($request->type))? trans('website.'.$request->type):trans('website.all').' <br><span>'.trans('website.dishes').'</span>'),'img'=>'/assets/website/images/shop-icon.png','icon'=>'fa fa-list'])
+    @include('website.partials.innerSearch',['title'=>((isset($request->type))? trans('website.'.$request->type):trans('website.all').' <br><span>'.trans('website.dishes').'</span>'),'img'=>'/assets/website/images/shop-icon.png','icon'=>'fa fa-list','title2'=>trans('website.resturantDish')])
 <!--,'title2'=>trans('website.signForm')-->
 
 
@@ -12,10 +12,10 @@
     <section class="inner-wrapper">
     <article class="container">
       <div class="content_wrapper">
-        <div class="captions_sec">
+      <!--   <div class="captions_sec">
           <h2>Welcome To Our offers</h2>
-        <!--   <h6>Lorem Ipsum is simply dummy text of the printing</h6> -->
-        </div>
+          <h6>Lorem Ipsum is simply dummy text of the printing</h6>
+        </div> -->
         <section class="mostselling-listing">
           <div class="row mostsellingwrap">
              @if(count($oResults))
