@@ -28,7 +28,7 @@
                   <h3>{{$oResult->{'name_'.config('app.locale')} }}</h3>
                   <p>Fresh Meat Start Price:</p>
                   <div class="price">{{$oResult->price}} KD <span>{{$oResult->price_befor}} KD</span></div>
-                  <div class="icon_stars"> <span class="star glyphicon glyphicon-star-empty"></span> <span class="star glyphicon glyphicon-star-empty"></span> <span class="star glyphicon glyphicon-star-empty"></span> <span class="star glyphicon glyphicon-star-empty"></span> <span class="star glyphicon glyphicon-star-empty"></span> </div>
+                  <div class="stars_main"> <div id="stars"  data-id="{{$oResult->id}}"  data-model="dish" data-rating="{{$oResult->rating}}"class="starrr"></div> </div> 
                   <div class="btn_dt"> 
                     
                     <!--- quantity -->

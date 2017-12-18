@@ -107,6 +107,6 @@ return [
 
     'notification'=>'Notification',
 
-
+      'addToCart'=>'ADD TO CART',
 
 ];

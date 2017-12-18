@@ -39,15 +39,9 @@
                                 <div class="most_selling_dt_text">
                                     <h3><a href="/dish/{{$oResult->id}}" class="color-black">{{$oResult->name_en}}</a> </h3>
                                     <p>Fresh Meat Start Price:</p>
-                                    <div class="price">{{$oResult->price}} KD <span>{{ isset($oResult->price_befor)? $oResult->price_befor:''}} </span></div>
-                                   <div class="icon_stars">
-                                    <span class="star glyphicon glyphicon-star-empty"></span>
-                                     <span class="star glyphicon glyphicon-star-empty"></span> 
-                                     <span class="star glyphicon glyphicon-star-empty"></span>
-                                      <span class="star glyphicon glyphicon-star-empty"></span>
-                                       <span class="star glyphicon glyphicon-star-empty"></span>
-                                        </div> 
-<!--  <div class="stars_main"> <div id="stars"  data-id="{{$oResult->id}}"  data-model="dish" data-rating="{{$oResult->rating}}"class="starrr"></div> </div>  -->
+                                    <div class="price">{{$oResult->price}} KD <span>{{ isset($oResult->price_befor)? $oResult->price_befor:''}} KD </span></div>
+                              
+ <div class="stars_main"> <div id="stars"  data-id="{{$oResult->id}}"  data-model="dish" data-rating="{{$oResult->rating}}"class="starrr"></div> </div> 
                                  
 
 
@@ -61,14 +55,26 @@
                                             </div>
                                             <div class="sp-plus2 fff"> <a class="ddd" href="#/home">+</a> </div>
                                         </div>
+                            <!--      <div class="cap-box">
+                              @if(isset(current_user()->getUser()->id))
+                                        
+                                      @if(current_user()->getUser()->type !=config('array.users_type_guest_index'))
+                                         @if(1 > 0)
+                                            <h2>  <a href="/cart" > <img src="/assets/website/images/cart-icon.png">{{trans('restaurant.addToCart')}}</a></h2>
+                                         @endif  
+                                      @else
+                                    
+                                         <h2> <a data-toggle="modal" data-target="#myModall" href="#" ><img src="/assets/website/images/cart-icon.png">{{trans('restaurant.addToCart')}}</a></h2>
+                                       @endif
+                                    @endif
+                                </div> -->
                                         <div class="cap-box">
-                                            <h2><a href="#" onclick="document.getElementById('f').submit();"> <img src="images/cart-icon.png"> ADD TO CART </a></h2>
-
-
-
-
-                                            
+                                            <h2><a href="/cart" onclick="document.getElementById('f').submit();"> <img src="/assets/website/images/cart-icon.png"> {{trans('restaurant.addToCart')}} </a></h2>
                                         </div>
+
+
+
+
                                     </div>
                                 </div>
                                 {!! Form::hidden('dish_id',$oResult->id) !!}
