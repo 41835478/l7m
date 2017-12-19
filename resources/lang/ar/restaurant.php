@@ -96,17 +96,17 @@ return [
     'discount_type'=>'Discount Type',
 
 
-    'discount'=>'Discount',
+    'discount'=>'خصم',
 
 
     'area_id'=>'Area Id',
 
 
-    'follow_us'=>'Follow Us',
+    'follow_us'=>'تابعنا',
 
 
-    'notification'=>'Notification',
+    'notification'=>'إعلام',
 
-      'addToCart'=>'ADD TO CART',
+      'addToCart'=>'اضافه الى السله',
 
 ];

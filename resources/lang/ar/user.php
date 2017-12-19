@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'signInText'=>'Sign In',
-    'signIn'=>'Sign In',
-    'email'=>'Email',
-    'password'=>'Password',
-    'InvalidLogin'=>'Please, check your email and password.',
+    'signInText'=>'تسجيل الدخول',
+    'signIn'=>'تسجيل الدخول',
+    'email'=>'البريد الالكتروني',
+    'password'=>'كلمة السر',
+    'InvalidLogin'=>'يرجى التحقق من بريدك الإلكتروني وكلمة المرور.',
     'login'=>'دخول'
 ];

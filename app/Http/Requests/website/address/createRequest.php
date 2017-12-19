@@ -41,7 +41,8 @@ class createRequest extends Request
     "phone"=>'required',
     "long"=>'required',
     "lat"=>'required',
-
+//"postal_code",
+//"address",
 
 
         ];

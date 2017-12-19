@@ -191,16 +191,16 @@
                         <aside class="col-md-12">
 
 
-                            <div class="shop-detail" style="width: 100%">
+                            <div class="shop-detail" >
                                 <div class="thumb"> <img src="{{$restaurant->img}}" alt=""> </div>
                             </div>
 
-                           <!--  <div class="shop-detail">
+                            <div class="shop-detail">
                                 <div class="address thumb inn_bx" style="background: #a90017">
 
 
                                 </div>
-                            </div> -->
+                            </div>
                         </aside>
                     </div>
                     <div class="row shop-detail-wrap">
