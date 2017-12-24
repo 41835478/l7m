@@ -25,18 +25,18 @@ public function rules()
 return [
     "area_id"=>'required',
    // "name"=>'required',
-    //"block"=>'required',
-   // "street"=>'required',
-  //  "avenue"=>'required',
-  //  "building"=>'required',
-  //  "floor"=>'required',
+   "block"=>'required',
+    "street"=>'required',
+    "avenue"=>'required',
+  "building"=>'required',
+   "floor"=>'required',
   //  "apartment_number"=>'required',
 "first_name"=>'required',
     "last_name"=>'required',
   //  "paci_number"=>'required',
 "phone"=>'required',
 "postal_code"=>'required',
-"address"=>'required',
+"address",
 ];
 }
 }

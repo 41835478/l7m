@@ -202,7 +202,9 @@ return [
     'menuesction'=>'IN THIS SECTION',
     'allrestaurants'=>'All Restaurants',
     'mostSelling'=>'Most Selling',
-    'checkout'=>'Checkout ',
+  'checkoutTitle'=>'<h2>CHECKOUT</h2>
+          Lorem Ipsum is simply dummy text of the printing',
+'checkout'=>'CHECKOUT',
     'createAccount'=>'Create Account',
     'myprofile'=>'My Profile',
     'rating'=>'Rating',

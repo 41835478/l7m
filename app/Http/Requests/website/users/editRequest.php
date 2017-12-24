@@ -30,7 +30,8 @@ return [
 
   "first_name"=>'required',
     "last_name"=>'required',
-    "email"=>'required|email|unique:users',
+   // "email"=>'required|email|unique:users',
+    "email"=>'required|email',
             "password"=>'required|confirmed',
             'password_confirmation'=> 'required',
             'address'=>'required',

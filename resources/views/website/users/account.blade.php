@@ -150,6 +150,7 @@ Feel free to check, put or edit your information here as your preference.</h6>
                                                 {!! Form::text("password_confirmation", null, ["placeholder"=> trans("users.password_confirmation")]) !!}
                                                 {!! $errors->first("password_confirmation", "<p class='help-block'>:message</p>") !!}
                                         </li>
+                                        
 
 
                         </ul>

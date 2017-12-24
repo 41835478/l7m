@@ -110,7 +110,7 @@
 <button type="submit" style="width:50px; height:40px;padding:0px; margin:0px;float:right;"><i class="fa fa-refresh"></i></button>
                                                               {!! Form::close() !!}
                     </td>
-                    <td width="15%">{{($cart->unit_price * $cart->quantity ) *1}} KWD</td>
+                    <td width="15%">{{($cart->unit_price * $cart->quantity ) *1}} KWمD</td>
                     <td width="10%" align="center" valign="middle"> <a href="/cart/delete/{{$cart->id}}"><b>X</b></a></td>
                   </tr>
                 </tbody>

@@ -179,8 +179,9 @@
 
 'menuesction'=>'في القائمة',
 'allrestaurants'=>'جميع المطاعم',
-
-'checkout'=>'الدفع',
+'checkoutTitle'=>'<h2>CHECKOUT</h2>
+          Lorem Ipsum is simply dummy text of the printing',
+'checkout'=>'CHECKOUT',
 'rating'=>'التصويت',
 
 'showMenu'=>'اظهر القائمة',

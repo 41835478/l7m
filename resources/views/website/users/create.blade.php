@@ -26,9 +26,9 @@
                 <div class="col-md-6 col-sm-10 col-md-offset-3 col-sm-offset-1">
                     <div class="log-wrap">
                     <ul class="log-way">
-                                <li><a href="#"><img src="/assets/website/images/facebook.png" alt="" title="facebook"></a></li>
-                                <li><a href="#"><img src="/assets/website/images/twitter.png" alt="" title="twitter"></a></li>
-                                <li><a href="#"><img src="/assets/website/images/google.png" alt="" title="google +"></a></li>
+                                <li><a href="/facebook-login"><img src="/assets/website/images/facebook.png" alt="" title="facebook"></a></li>
+                                <li><a href="/twitter-login"><img src="/assets/website/images/twitter.png" alt="" title="twitter"></a></li>
+                                <li><a href="/google-login"><img src="/assets/website/images/google.png" alt="" title="google +"></a></li>
                     </ul>
                     
                     <div class="form-fill"><h5>OR   <span>(  Fill the Below form to Register  )</span></h5></div>

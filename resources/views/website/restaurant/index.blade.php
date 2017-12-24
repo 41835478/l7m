@@ -2,24 +2,23 @@
 @section('title', Lang::get('website.allrestaurants'))
 @section('content')
 
-   @include('website.partials.innerSearch',['title'=>' <span>'.trans('website.restaurants').'</span>','img'=>'/assets/website/images/shop-icon.png','icon'=>'fa fa-list','request'=>$request,'title2'=>trans('website.resturants')] )
-<!--,'title2'=>trans('website.signForm')-->
+ {{--   @include('website.partials.innerSearch',['title'=>' <span>'.trans('website.restaurants').'</span>','img'=>'/assets/website/images/shop-icon.png','icon'=>'fa fa-list','request'=>$request,'title2'=>trans('website.resturants')] ) --}}
 
-<!--     <article class="container">
+
+
+
+
+
+
+    <article class="container">
         <div class="inn_caption">
-
-
             @if($request->type)
-
                 <h2>{{trans('website.newRestaurants')}}</h2>
             @else
                 <h2>{{trans('website.restaurants')}}</h2>
-
             @endif
-
-
         </div>
-    </article> -->
+    </article>
 
 
 
@@ -75,31 +74,16 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!--inner content-->
     <section class="inner-wrapper">
         <article class="container">
 
             <div class="content_wrapper">
-           <!--      <div class="captions_sec">
+                <div class="captions_sec">
                     <div class="icon_in"><img src="assets/website/images/shop-icon.png" alt=""></div>
                     <h2>Welcome To Our Shops</h2>
                     <h6>Lorem Ipsum is simply dummy text of the printing</h6>
-                </div> -->
+                </div>
                 @if(count($oResults))
                 <section class="shop-listing">
                     <div class="row shopwrap">
