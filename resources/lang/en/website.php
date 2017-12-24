@@ -102,6 +102,7 @@ return [
     'deliveryAddress'=>'Delivery Address',
     'orderSummary'=>'Order Summary',
     'accountInformation'=>'Account Information',
+    'shopMenu'=>'L7M SHOP MENU',
     'deliveryAddress'=>'Delivery Address',
     'orderSummary'=>'Order Summary',
     'item'=>'Item',
@@ -273,7 +274,8 @@ return [
 Your request will be send to the consultant and they will be in touch with you soon.',
 'feedbacks'=>'Thank you for reaching us,<br>
 please feel free to stay in touch with us by sharing your feedback or any enquiry you have.',
-'resturantCreate'=>'To join our corporation, please fill in the forms below and we will contact you as soon as possible',
+'resturantCreate'=>'<h2> Add L7m Shop</h2>
+To join our corporation, please fill in the forms below and we will contact you as soon as possible',
 'title2'=>'Lorem Ipsum is simply dummy text of the printing',
 'create'=>'Welcome to My Account!<br>
 Feel free to check, put or edit your information here as your preference.',
@@ -281,8 +283,8 @@ Feel free to check, put or edit your information here as your preference.',
 'shopping'=>'Shopping Cart',
 'shoppingCart'=>'<h2>Shopping Cart</h2>
           <h6>To join our corporation, please fill in the forms below and we will contact you as soon as possible',
-'menu'=>'<h2>Welcome To Our Dishs</h2>
-                    <h6>Lorem Ipsum is simply dummy text of the printing',
+'menu'=>'<h2>Our PRODUCT</h2>
+                   Lorem Ipsum is simply dummy text of the printing',
 'resturantDish'=>'  <h2>Welcome To Our offers</h2>
           Lorem Ipsum is simply dummy text of the printing',
 

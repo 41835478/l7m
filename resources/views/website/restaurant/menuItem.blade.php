@@ -2,7 +2,7 @@
 @section('title', Lang::get('website.order'))
 @section('content')
 
-   @include('website.partials.innerSearch',['title'=>trans('website.dishes'),'img'=>'/assets/website/images/shop-icon.png','icon'=>'fa fa-list','request'=>$request,'title2'=>trans('website.menu')])
+   @include('website.partials.innerSearch',['title'=>trans('website.shopMenu'),'img'=>'/assets/website/images/shop-icon.png','icon'=>'fa fa-list','request'=>$request,'title2'=>trans('website.menu')])
 <!--,'title2'=>trans('website.signForm')-->
 <style type="text/css">
     .col-sm-3{
