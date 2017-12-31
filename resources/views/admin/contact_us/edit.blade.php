@@ -58,8 +58,7 @@
                                     'method' => 'PATCH',
                                     'url' => ['/admin/contact_us', $contact_us->id],
                                     'class' => 'form-horizontal'
-                                ]) !!}
-
+                                ]) !!} 
 
 
 

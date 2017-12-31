@@ -2,7 +2,9 @@
 
 Route::group(['middleware' => ['website.authorization'],'namespace' => 'website\users'], function () {
 //    Route::get('/restaurant/menuItem', 'Restaurant@getMenuItem')->name('menuItem');
-    Route::resource('users', 'Users');
+    Route::resource('users', 'Users'); 
+    
+ // Route::resource('/users/{id}/resetForgetPassword', 'Users@update'); 
 
     Route::resource('order', 'Order');
 

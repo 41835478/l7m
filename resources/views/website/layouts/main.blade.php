@@ -103,7 +103,7 @@ $homeBanners= $banner->getByFilter(['type'=>config('array.banner_type_home_banne
                                     <article class="container">
                                         <h1>Fresh meats</h1>
                                         <h5>Tender, Healthier & Tastier meat straight from farms</h5>
-                                        <a href="#">Read More</a> </article>
+                                        <a href="/about">Read More</a> </article>
                                 </div>
                             </li>
                         @endforeach

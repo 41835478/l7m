@@ -12,8 +12,7 @@ use App\Http\Requests\admin\cuisine\editRequest;
 use Session;
 
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\View;
-
+use Illuminate\Support\Facades\View; 
 
 use App\Models\Cuisine as mCuisine;
 use App\Repositories\admin\cuisine\CuisineContract as rCuisine;

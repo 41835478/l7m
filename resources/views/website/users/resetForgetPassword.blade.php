@@ -21,6 +21,11 @@
             <div class="row">
             <div class="col-md-6 col-sm-10 col-md-offset-3 col-sm-offset-1">
                 <div class="log-wrap">
+                    {{--  {!! Form::model($contact_us, [
+                                    'method' => 'PATCH',
+                                    'url' => ['/website/users', $oUsers->id],
+                                    'class' => 'form-horizontal'
+                                ]) !!} --}}
                    {!! Form::open([]) !!}
                     @include('common.partials.messages')
 

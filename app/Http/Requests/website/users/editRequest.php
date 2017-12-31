@@ -28,15 +28,15 @@ return [
     // "phone"=>'required|numeric',
     // "gender"=>'required',
 
-  "first_name"=>'required',
-    "last_name"=>'required',
+  //"first_name"=>'required',
+    //"last_name"=>'required',
    // "email"=>'required|email|unique:users',
-    "email"=>'required|email',
+    //"email"=>'required|email',
             "password"=>'required|confirmed',
             'password_confirmation'=> 'required',
-            'address'=>'required',
-            "mobile"=>'required|min:4|numeric',
-               "area_id"=>'required',
+      //      'address'=>'required',
+        //    "mobile"=>'required|min:4|numeric',
+          //     "area_id"=>'required',
 
 
 ];

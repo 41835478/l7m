@@ -16,6 +16,7 @@ use Illuminate\Http\JsonResponse;
 
 use App\Http\Requests\website\users\createRequest;
 use App\Http\Requests\website\users\editRequest;
+use App\Http\Requests\website\users\resetForgetPassword;
 
 use App\Repositories\website\users\UsersContract as rUsers;
 use App\Repositories\website\area\AreaContract as rArea;
@@ -141,7 +142,8 @@ class Users extends Controller
      */
     public function edit($id)
     {
-
+       
+       
 
     }
 
@@ -172,7 +174,8 @@ class Users extends Controller
         if ($request->ajax()) {
             return new JsonResponse(['status' => 'success'], 200);
         } else {
-            return redirect('/users');
+          return redirect('/users');
+
         }
     }
 
